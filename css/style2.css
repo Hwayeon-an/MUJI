@@ -1,0 +1,311 @@
+/* Main Banner */
+#main_banner {
+  padding:0 24px;
+}
+#main_banner .inner_banner { /* main banner / 가운데 정렬 */
+  width:100%; height:600px;
+  border-radius: 20px;
+  background:url('../images/main_banner.png') center/cover;
+
+  display:flex;
+  align-items:center;
+}
+#main_banner .inner_banner article { /* 1200  */
+  width:1200px;
+  padding:0 5px;
+  margin:auto;
+}
+
+#main_banner .inner_banner > article > p {
+  font-size:18px;
+  line-height:1.2;
+  color:#1A3341;
+}
+#main_banner .inner_banner > article > h1 {
+  font-size:64px;
+  font-weight: 900;
+}
+#main_banner .indicator { /*indicator*/
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-top:114px;
+}
+#main_banner .indicator button { 
+  width:42px;
+  height:42px;
+  border-radius:8px;
+  background-color: transparent;
+  border:solid 1px #111;
+
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+#main_banner .indicator button img {
+  width:24px;
+  height:24px;
+}
+#main_banner .indicator p {
+  font-size:20px;
+  font-weight:500;
+  letter-spacing:2px;
+}
+#main_banner .indicator span {
+  color:#767676;
+}
+
+
+
+/*  *//*  */
+/* 기획전 */
+#special {
+  margin:140px 0 140px;
+}
+#special .inner {
+  width:1200px;
+  padding:0 5px;
+  margin:auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+#special .special_text_wrap > h1 {
+  font-size:42px;
+  font-weight:700;
+  color:#1D1D1F;
+}
+#special .special_text_wrap > p {
+  color:#767676;
+  font-size:20px;
+  margin-top:16px;
+}
+#special .special_text_wrap > a {
+  display:block;
+  width:150px;
+  line-height:60px;
+  text-align:center;
+  color:#1D1D1F;
+  border:solid 1px #1D1D1F;
+  border-radius: 90px;
+  transition:.3s;
+  margin-top:42px;
+}
+#special .special_text_wrap > a:hover {
+  background-color:#7F0019;
+  border:solid 1px #7F0019;
+  color:white;
+}
+#special .special_banner_wrap {
+  width:690px;
+}
+#special .special_banner_wrap > .long_banner { /* 기획전 long banner */
+  width:100%;
+  height:312px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#special .special_banner_wrap .long_banner > img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.special_banner_wrap > .long_banner > .gra_filter {
+  width:100%;
+  height:100%;
+  position: absolute;
+  left:0; top:0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+#special .special_banner_wrap .long_banner > p,
+#special .special_banner_wrap .short_banner p {
+  position: absolute;
+  bottom:32px; left:32px;
+  color:#f4f4f4;
+}
+#special .short_banner { /* 기획전 Short banner */
+  width:100%;
+  height:226px;
+  margin-top:24px;
+
+  display:flex;
+  gap:26px;
+  align-items:center;
+}
+#special .short_banner div {
+  width:48%;
+  height:226px;
+  border-radius: 20px;
+  position: relative;
+}
+#special .short_banner div img { /*기획전 short left*/
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+#special .short_banner .gra_filter { /* 기획전 short filter  */
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0; top:0;
+  background:linear-gradient(transparent, rgba(0,0,0,0.6));
+}
+
+
+
+
+
+/* 신상품 */
+#main_new {
+  width:100%;
+  padding:140px 0;
+  background:#f9f9f9;
+  border-radius: 80px 80px 0 0;
+}
+#main_new > .inner {
+  width:1200px;
+  padding:0 5px;
+  margin:auto;
+  outline: black 1px solid;
+
+}
+#main_new .new_header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+#main_new .new_header > h1 {
+  font-size:42px;
+  font-weight:700;
+}
+#main_new .new_header .new_indicator { /*indicator*/
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+#main_new .new_header .new_indicator > p {
+  font-size:20px;
+  font-weight:500;
+  margin-right:32px;
+}
+#main_new .new_header .new_indicator > p > span {
+  color:#767676;
+}
+#main_new .new_header .new_indicator > button {
+  width:48px;
+  height:48px;
+  border-radius:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#main_new .new_header .new_indicator > button > img {
+  width:28px;
+  height:28px;
+}
+#main_new .new_indicator > button:nth-of-type(1) {
+  border:solid 1px #111;
+  background-color:white;
+}
+#main_new .new_indicator > button:nth-of-type(2) {
+  border:solid 1px #767676;
+  background-color:rgba(0, 0, 0, 0.1);
+  margin-left:12px;
+}
+/* 메인 신상품 리스트 */
+.mNew_list {
+  margin-top:32px;
+  width:100%;
+  height:398px;
+  outline: red 1px solid;
+}
+.mNew_abs_box {
+  width:3000px;
+  height:398px;
+  background-color: #1a33410a;
+  position:absolute;
+
+  display:flex;
+  gap:24px;
+}
+.shopping_list { /*쇼핑 list card */
+  width:412px;
+  height: 398px;
+  border-radius: 20px;
+  background-color:white;
+  border:solid 1px #EDECEF;
+  overflow:hidden;
+  position:relative;
+}
+.shopping_img_wrap {
+  width:100%;
+  height:296px;
+  background-color: black;
+  border:solid 1px #EDECEF;
+}
+.shopping_img_wrap img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.shopping_txt_wrap {
+  margin-top:16px;
+  padding-left:26px;
+}
+.shopping_txt_wrap > p {
+  font-size:18px;
+  color:#1D1D1F;
+}
+.shopping_txt_wrap > div {
+  margin-top:4px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.shopping_txt_wrap > div > h1 { /* DC */
+  font-size:20px;
+  color:#7F0019;
+  font-weight:700;
+}
+.shopping_txt_wrap .shopping_price { /*가격*/
+  font-size:22px;
+  font-weight:600;
+}
+.shopping_txt_wrap .shopping_price > span { /*가격 (원)*/
+  font-size:14px;
+  color:#767676;
+  font-weight:400;
+}
+.shopping_txt_wrap .shopping_free { /*무료배송*/
+  display:inline;
+  font-size:14px;
+  color:#7F0019;
+  padding:2px 4px;
+  border:solid 1px #7F0019;
+  background-color: #7f001910;
+  border-radius:6px;
+}
+.shopping_txt_wrap > div > h2 { /* 원가 */
+  font-size:14px;
+  color:#999;
+  font-weight:500;
+  text-decoration:line-through;
+  padding-top:6px;
+}
+.shopping_list .shoppingList_overlay {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color:rgba(0, 0, 0, 0.4);
+  z-index:99;
+}
+.shoppingList_overlay img {
+  position:absolute;
+  inset:0;
+  width:42px;
+  height:42px;
+}
+
