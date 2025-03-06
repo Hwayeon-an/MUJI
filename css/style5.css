@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* 쇼핑 화면 css입니다. */
+
+
+/* (1) shopping 첫번째 화면 */
+#shopping {
+  width:100%;
+  padding-top:128px;
+  padding-bottom:140px;
+}
+#shopping > .inner {
+  width:1200px;
+  outline:blue 1px solid;
+  margin:auto;
+  padding:0 5px;
+}
+#shopping .shooping_ca_tab {
+  width:100%;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+#shopping .shooping_ca_tab {}

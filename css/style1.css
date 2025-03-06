@@ -25,6 +25,22 @@ body::-webkit-scrollbar-thumb {
   background-color:#949494;
   border-radius:90px;
 }
+/*공통*/
+/* list 항목 호버 시 동작효과 */
+.list_box {
+  cursor:pointer;
+}
+.list_img_box {
+  overflow:hidden;
+}
+.list_img_box img {
+  transition:.4s;
+}
+.list_box:hover .list_img_box img {
+  transform:scale(1.2);
+}/*END list 항목 호버 시 동작효과*/
+
+
 
 
 /* Back to the Top */
@@ -41,6 +57,7 @@ body::-webkit-scrollbar-thumb {
   position:fixed;
   right:42px;
   bottom:52px;
+  z-index:999;
 }
 .top_btn img {
   width:30px;
@@ -240,7 +257,6 @@ body::-webkit-scrollbar-thumb {
   color:white;
   padding:24px 0 100px 0;
   border-radius:60px 60px 0 0;
-  margin-top:140px;
 }
 #footer .inner {
   width:1200px;

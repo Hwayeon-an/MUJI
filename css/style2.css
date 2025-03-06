@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* 메인화면 컨텐츠 css입니다. */
+
 /* Main Banner */
 #main_banner {
   padding:0 24px;
@@ -81,8 +84,9 @@
   color:#767676;
   font-size:20px;
   margin-top:16px;
+  margin-bottom:42px;
 }
-#special .special_text_wrap > a {
+.more_btn { /*[공통] 둘러보기 버튼*/
   display:block;
   width:150px;
   line-height:60px;
@@ -91,9 +95,8 @@
   border:solid 1px #1D1D1F;
   border-radius: 90px;
   transition:.3s;
-  margin-top:42px;
 }
-#special .special_text_wrap > a:hover {
+.more_btn:hover { /*[공통] 둘러보기 버튼*/
   background-color:#7F0019;
   border:solid 1px #7F0019;
   color:white;
@@ -175,6 +178,7 @@
   display:flex;
   justify-content:space-between;
   align-items:center;
+  padding-left:8px;
 }
 #main_new .new_header > h1 {
   font-size:42px;
@@ -189,6 +193,7 @@
   font-size:20px;
   font-weight:500;
   margin-right:32px;
+  letter-spacing:2px;
 }
 #main_new .new_header .new_indicator > p > span {
   color:#767676;
@@ -206,13 +211,16 @@
   height:28px;
 }
 #main_new .new_indicator > button:nth-of-type(1) {
-  border:solid 1px #111;
+  border:solid 1px #ccc;
   background-color:white;
 }
 #main_new .new_indicator > button:nth-of-type(2) {
-  border:solid 1px #767676;
+  border:solid 1px #ccc;
   background-color:rgba(0, 0, 0, 0.1);
   margin-left:12px;
+}
+#main_new .new_indicator > button:nth-of-type(2) img {
+  opacity: 0.6;
 }
 /* 메인 신상품 리스트 */
 .mNew_list {
@@ -240,8 +248,6 @@
 .shopping_img_wrap {
   width:100%;
   height:296px;
-  background-color: black;
-  border:solid 1px #EDECEF;
 }
 .shopping_img_wrap img {
   width:100%;
@@ -255,6 +261,10 @@
 .shopping_txt_wrap > p {
   font-size:18px;
   color:#1D1D1F;
+  width:358px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
 }
 .shopping_txt_wrap > div {
   margin-top:4px;
@@ -297,6 +307,7 @@
   width:100%;
   height:100%;
   background-color:rgba(0, 0, 0, 0.4);
+  z-index:10;
 }
 .shoppingList_overlay > img {
   position:absolute;
@@ -304,6 +315,7 @@
   transform:translate(-50%, -50%);
   width:42px;
   height:42px;
+  z-index:10;
 }
 
 
@@ -325,6 +337,7 @@
 #main_popularity .main_sec_headerTxt > h1 {
   font-size:42px;
   font-weight:700;
+  padding-left:8px;
 }
 #main_popularity .main_popular_ca {
   display:flex;
@@ -372,3 +385,107 @@
 #main_popularity .main_popular_ca > article:nth-child(2){
   background: url('../images/banner_popul_ca2.png') center/cover;
 }
+/*인기상품 list*/
+.main_popular_contents {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:24px;
+  margin-top:24px;
+}
+.main_popular_banner_wrap { /*왼쪽 긴 배너*/
+  width:54%;
+  height:820px;
+  border-radius: 20px;
+  border:solid 1px #EDECEF;
+  background-color: rgba(0, 0, 0, 0.25);
+  text-align:center;
+  position:relative;
+}
+.main_popular_banner_wrap img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.main_popular_banner_wrap > div {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+.main_popular_banner_wrap p {
+  font-size:20px;
+  font-weight:700;
+  color:#f4f4f4;
+  text-align:center;
+}
+.main_popular_banner_wrap p:nth-of-type(2) {
+  margin:24px 0 78px;
+}
+.main_popular_banner_wrap p:nth-of-type(3) {
+  position: relative;
+  display:inline-block;
+  margin: 0 auto;
+  font-size:24px;
+  font-weight:800;
+}
+.main_popular_banner_wrap p:nth-of-type(3)::after {
+  content: "";
+  width:100%;
+  height:2px;
+  border-radius:30px;
+  background-color:#f4f4f4;
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+.main_popular_list_wrap {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.popul_more_btn { /*인기상품 둘러보기 버튼*/
+  width:100%;
+  display:flex;
+  justify-content:center;
+  padding-top:52px;
+}
+/* 매일 매거진 */
+#mail_magazine {
+  width:100%;
+  height:132px;
+  border-radius:20px;
+  margin-top:130px;
+  background:url('../images/banner_mailMagazine\(main\).png') center/cover;
+  color:#f4f4f4;
+}
+#mail_magazine { /*매일매거진 신청 text btn*/
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:82px;
+}
+#mail_magazine > p {
+  font-size:20px;
+  font-weight:600;
+}
+#mail_magazine > div > p {
+  font-size:18px;
+}
+#mail_magazine div a {
+  color:#f4f4f4;
+  font-size:18px;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+#mail_magazine div a img {
+  width:18px;
+  height:18px;
+}
+
+
+
