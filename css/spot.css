@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* 지점 페이지입니다. */
+
+
+#spot_container {
+  margin-top:128px;
+  margin-bottom: 140px;
+}
+#spot_container .inner {
+  width:1200px;
+  padding:0 5p;
+  margin:auto;
+}
+
+.spot_list {
+  display:flex;
+  flex-wrap:wrap;
+  gap:62px 24px;
+  margin-top:124px;
+}
+.spot_list .two_list {
+  width:583px;
+  border-radius: 20px;
+  overflow:hidden;
+  border:solid 1px #EDECEF;
+}

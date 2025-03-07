@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/*event pages입니다*/
+
+#event_container {
+  min-width:1200px;
+  padding-top:128px;
+  padding-bottom:140px;
+}
+#event_container .inner {
+  width:1200px;
+  margin:auto;
+  padding:0 5px;
+}
+
+/* search */
+.evnet_search {
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.event_search_form {
+  width:838px;
+  margin-top:32px;
+}
+.event_search_form h1 {
+  font-size:32px;
+  font-weight: 600;
+  color:#1d1d1f;
+}
+.event_search_form input {
+  width:100%;
+  height:70px;
+  border-radius: 90px;
+  border:solid 1px #1d1d1f;
+  padding-left:68px;
+  font-size:18px;
+  background:url('../images/icon_search.png') no-repeat;
+  background-position: 28px 18px;
+  background-size:32px;
+}
+/*  */
+#event_container .shopping_ca_tab {
+  width:100%;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  gap:42px;
+  margin-top:140px;
+}
+#event_container .shopping_ca_tab button {
+  background:transparent;
+  border:none;
+  outline:none;
+  font-size:42px;
+  color:#ccc;
+  font-weight:600;
+  cursor:pointer;
+}
+#event_container .shopping_ca_tab button.shopping_active {
+  color:#7f0019;
+}
+#event_container .note_list {
+  margin-top: 42px;
+}
+
+
+
+/* Event View Pages */
+.event_view article p {
+  margin-top:12px;
+  color:#767676;
+}

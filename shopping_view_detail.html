@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/font.css"> <!-- font -->
+  <link rel="stylesheet" href="css/style1.css"> <!-- header, footer -->
+  <link rel="stylesheet" href="css/style2.css"> <!-- main -->
+  <link rel="stylesheet" href="css/style3.css"> <!-- what is muji? -->
+  <link rel="stylesheet" href="css/style4.css"> <!-- 미니멀의 삶 -->
+  <link rel="stylesheet" href="css/style5.css"> <!-- Shopping -->
+  <link rel="icon" href="images/favicon_io/android-chrome-192x192.png" type="image/x-icon">
+  <title>MUJI</title>
+</head>
+<body>
+
+  <!--Back to the Top-->
+  <button class="top_btn" onclick="location.href='#'">
+    <img src="images/backtothetop.png" alt="top" title="top">
+  </button>
+
+  <!-- search box -->
+  <section id="search_wrap">
+    <div class="inner">
+      <!--1 무엇을 찾으시나요 -->
+      <article class="search1">
+        <h1>무엇을 찾으시나요?</h1>
+        <button type="button" class="search_closeBtn"><img src="images/icon_close.png" alt="close"></button>
+      </article>
+      <!--2 검색 -->
+      <form class="search2" method="post" action="#">
+        <input type="text" id="search" name="search" placeholder="무인양품은 품질과 좋은 생활을 고려하는 브랜드입니다.">
+      </form>
+      <!-- 3 추천해요 -->
+      <article class="search3">
+        <h2>추천해요</h2>
+        <div>
+          <p>#V넥 니트</p>
+          <p>#울 스트라이프 슬랙스</p>
+          <p>#철제 조립 수납장</p>
+          <p>#면 카고 바지</p>
+          <p>#피넛 초콜릿</p>
+          <p>#솜사탕</p>
+          <p>#요거트 볼 그릇</p>
+          <p>#선스틱</p>
+          <p>#범퍼 카드지갑</p>
+          <p>#수면잠옷</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+  <!-- header -->
+  <header id="header">
+    <div class="inner">
+      <!-- logo -->
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="MUJI로고" title="MUJI로고"></a>
+      </div>
+      <nav>
+        <ul class="main_menu_ul">
+          <li><a href="whatIsMuji.html">What is MUJI?</a></li>
+          <li><a href="minimalife.html">미니멀의 삶</a></li>
+          <li><a href="shopping.html">Shopping</a></li>
+          <li><a href="event.html">Event</a></li>
+          <li><a href="spot.html">지점안내</a></li>
+        </ul>
+        <ul class="main_menu_icon">
+          <li><img class="search" src="images/icon_search.png" alt="search" title="search"></li>
+          <li><img src="images/icon_mypage.png" alt="Mypage" title="Mypage"></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <!-- contents -->
+  <section id="shopping_detail">
+    <div class="inner">
+
+      <!-- detail 제품 정보 상단 -->
+      <div class="sho_detail_product">
+        <!-- left -->
+        <div class="product_img">
+          <img src="images/thum_img1.png" alt="대표 이미지">
+          <ul>
+            <li><img src="images/product_thum/img1.png"></li>
+            <li class="product_pic"><img src="images/product_thum/img2.png"></li>
+            <li><img src="images/product_thum/img3.png"></li>
+            <li><img src="images/product_thum/img4.png"></li>
+            <li><img src="images/product_thum/img5.png"></li>
+            <li><img src="images/product_thum/img6.png"></li>
+            <li><img src="images/product_thum/img7.png"></li>
+            <li><img src="images/product_thum/img8.png"></li>
+            <li><img src="images/product_thum/img9.png"></li>
+            <li><img src="images/product_thum/img10.png"></li>
+          </ul>
+        </div>
+        <!-- right -->
+        <div class="product_info">
+          <!-- like, share -->
+          <div class="like_and_share">
+            <button><img src="images/icon_like(off).png" alt="like" title="like"></button>
+            <button><img src="images/icon_share.png" alt="Share" title="Share"></button>
+          </div>
+
+          <!-- Product Name -->
+          <article class="product_name_txt">
+            <h1>여성 워셔블 울 하이 게이지 크루넥 가디건</h1>
+            <p>
+              보풀이 적은 수법으로 짠 매끄러운 촉감의 워셔블 울 하이 게이지 크루넥 가디건.<br>
+              Women’s Washable high-gauge Crew neck cardigan <br>
+              워셔블 울 하이 게이지 크루넥 가디건. <br>
+              소재는 모 100%이며, 집에서 세탁이 가능하도록 방축 가공을 하고, 보풀이 적은 <br>
+              수법으로 짠 매끄러운 촉감의 니트입니다.
+            </p>
+            <p class="shopping_free">무료배송</p>
+          </article>
+
+          <!-- 옵션 선택 -->
+          <form class="product_pic_option" method="post" action="#">
+            <!--색상-->
+            <article class="p_option_color">
+              <h2>색상</h2>
+              <ul>
+                <li>
+                  <input type="radio" name="product_color" id="product_color_radio1" class="color1">
+                  <label for="product_color_radio1" class="p_color1 product_color"></label>
+                  <p>아이보리</p>
+
+                  <!--
+                    일일히 for id 맞추지 말고
+                    <lable>
+                      <input id="" name="">
+                      <span></span>  -> 이게 기존 label 역할 함! (기본 이미지 ->(클릭 시)-> 체크 이미지)
+                    </label>
+                  -->
+                </li>
+                <li>
+                  <input type="radio" name="product_color" id="product_color_radio2" class="color2" checked>
+                  <label for="product_color_radio2" class="p_color2 product_color"></label>
+                  <p>네이비</p>
+                </li>
+                <li>
+                  <input type="radio" name="product_color" id="product_color_radio3" class="color3">
+                  <label for="product_color_radio3" class="p_color3 product_color"></label>
+                  <p>올리브</p>
+                </li>
+              </ul>
+            </article>
+            <!--사이즈-->
+            <article class="p_option_size">
+              <h2>사이즈</h2>
+              <select class="option_select">
+                <option selected disabled>옵션을 선택해주세요</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+            </article>
+            <!--수량-->
+            <article class="p_option_que">
+              <h2>수량</h2>
+              <div>
+                <button class="p_minus" type="button"><img src="images/icon_minus.png"></button>
+                <input class="p_que_value" type="input" value="1">
+                <button class="p_plus" type="button"><img src="images/icon_plus.png"></button>
+              </div>
+            </article>
+          </form>
+
+          <!--총 결제 가격-->
+          <article class="total_price">
+            <h2>총 가격</h2>
+            <h1>46,900<span>원</span></h1>
+          </article>
+
+          <!-- BUTTON 장바구니, 구매하기 -->
+          <article class="shopping_button">
+            <button class="shopping_jang">장바구니</button>
+            <button class="shopping_buy">구매하기</button>
+          </article>
+        </div>
+      </div>
+
+
+      <!-- 3가지 탭 -->
+      <article class="product_view_tab_first product_view_tab">
+        <ul>
+          <li class="product_tab_active"><a href="shopping_view_detail.html">상세정보</a></li>
+          <li><a href="shopping_view_review.html">상품평<span>512</span></a></li>
+          <li><a href="shopping_view_qna.html">문의<span>12</span></a></li>
+        </ul>
+      </article>
+
+      <!--상세페이지-->
+      <div class="product_detail">
+        <img src="images/product_detail_design.png" alt="detail" title="detail">
+      </div>
+
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
+  
+  
+
+
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="inner">
+      <!-- logo, 개인정보처리방침 등 -->
+      <article class="footer_up_wrap">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo(white).png" alt="MUJI 로고" title="MUJI 로고"></a>
+        </div>
+        <ul>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">청소년보호정책</a></li>
+          <li><a href="#">임직원 인증하기</a></li>
+          <li><a href="#">제휴문의</a></li>
+        </ul>
+      </article>
+      <!-- footer 그 외 정보 -->
+      <div class="footer_under_wrap">
+        <!--left-->
+        <div class="footer_under_left"> 
+          <article> <!--1-->
+            <p><span>롯데쇼핑 주식회사 대표이사</span>  김사무엘상현, 정준호, 강성현</p>
+            <p><span>사업장 소재지</span>  서울특별시 강남구 테헤란로 507 (삼성동, WeWork빌딩), 7층</p>
+            <p><span>통신판매업 신고</span>  2024-서울강남-04439</p>
+            <p><span>호스팅 서비스 사업자</span>  롯데쇼핑㈜ e커머스사업부</p>
+            <p>
+              <span>사업자등록번호</span>  529-85-00774 (롯데쇼핑(주) e커머스사업부)
+              <a href="#">사업자 정보 확인</a>
+            </p>
+          </article>
+          <article> <!--2-->
+            <p><span>
+              고객님의 안전거래를 위해 현금 등으로 결제 시 결제금액의 전액에 대해 저희 쇼핑몰에서 가입한
+              소비자 피해 보상보험 서비스를 이용하실 수 있습니다.
+            </span></p>
+            <p>
+              Copyright LOTTE SHOPPING Co., Ltd. e-commerce Business Division All right reserved.
+            </p>
+          </article>
+        </div> <!--END footer left-->
+        <!-- right -->
+        <div class="footer_under_right">
+          <article> <!--tel-->
+            <div>
+              <p>온라인 고객센터</p>
+              <h1>1577-2892</h1>
+              <p>muji@lotte.net</p>
+            </div>
+            <div>
+              <p>오프라인 매장 고객센터</p>
+              <h1>02&#41;2632-8470</h1>
+              <p>muji@lotte.net</p>
+            </div>
+          </article>
+          <ul>
+            <li>
+              <a href="#">
+                <img src="images/footer_sns1.png" alt="MUJI App" title="MUJI App">
+                <div>
+                  <p>APP</p>
+                  <p>MUJI</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/footer_sns2.png" alt="Instagram App" title="Instagram App">
+                <div>
+                  <p>APP</p>
+                  <p>인스타그램</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/footer_sns3.png" alt="Blog App" title="Blog App">
+                <div>
+                  <p>Blog</p>
+                  <p>블로그</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div><!--END footer right-->
+      </div>
+    </div>
+  </footer>
+
+
+<script>
+  let search_box = document.querySelector('#search_wrap');
+  let search_icon= document.querySelector('.search');
+  let search_close = document.querySelector(".search_closeBtn");
+  console.log(search_icon);
+
+  search_icon.addEventListener('click', function(){
+    search_box.style.opacity = 1;
+    search_box.style.visibility = "visible";
+  });
+
+  search_close.addEventListener('click', function(){
+    search_box.style.opacity = 0;
+    search_box.style.visibility = "hidden";
+  });
+</script>
+</body>
+</html>

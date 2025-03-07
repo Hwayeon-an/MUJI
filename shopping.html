@@ -62,8 +62,8 @@
           <li><a href="whatIsMuji.html">What is MUJI?</a></li>
           <li><a href="minimalife.html">미니멀의 삶</a></li>
           <li><a href="shopping.html">Shopping</a></li>
-          <li><a href="#">Event</a></li>
-          <li><a href="#">지점안내</a></li>
+          <li><a href="event.html">Event</a></li>
+          <li><a href="spot.html">지점안내</a></li>
         </ul>
         <ul class="main_menu_icon">
           <li><img class="search" src="images/icon_search.png" alt="search" title="search"></li>
@@ -79,10 +79,392 @@
   <section id="shopping">
     <div class="inner">
       <!--의류 가구 탭-->
-      <div class="shooping_ca_tab">
-        <button>의류</button>
+      <div class="shopping_ca_tab">
+        <button class="shopping_active">의류</button>
         <button>가구</button>
       </div>
+      <!-- 쇼핑 카테고리 탭 -->
+      <ul class="shopping_ca_tab2">
+        <li class="shopping_active2"><a href="#">상의</a></li>
+        <li><a href="#">하의</a></li>
+        <li><a href="#">원피스</a></li>
+        <li><a href="#">패션소품</a></li>
+        <li><a href="#">신발</a></li>
+        <li><a href="#">겨울준비</a></li>
+        <li><a href="#">인기상품</a></li>
+        <li><a href="#">Sale</a></li>
+      </ul>
+
+      <!-- select -->
+      <div class="shopping_select">
+        <ul>
+          <!-- 품절제외 -->
+          <li>
+            <input type="checkbox" id="sho_soldout" name="sho_soldout">
+            <label for="sho_soldout"></label>
+            <label for="sho_soldout">품절상품 제외</label>
+          </li>
+          <!-- 추천순, 인기순 -->
+          <li>
+            <select>
+              <option selected>MUJI 추천순</option>
+              <option>신상품순</option>
+              <option>리뷰 많은순</option>
+              <option>높은 가격순</option>
+              <option>낮은 가격순</option>
+              <option>할인율 높은순</option>
+            </select>
+          </li>
+          <!-- 여자, 남자, 전체 -->
+          <li>
+            <select>
+              <option selected>All</option>
+              <option>남성</option>
+              <option>여성</option>
+              <option>Unisex</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- 쇼핑 리스트 -->
+      <div class="shopping_main_list">
+        <!-- list :: 무료배송 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list1.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>여성 워셔블 니트 크루넥 가디건</p>
+              <div>
+                <p class="shopping_price">299,900 <span>원</span></p>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 할인 상품 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list2.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>여성 안데스 울 자카드 편직 베스트</p>
+              <div class="shopping_four_price">
+                <h1>28%</h1>
+                <p class="shopping_price">39,900 <span>원</span></p>
+                <h2>55,000원</h2>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 할인 상품 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list3.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>여성 울 부클레 폴로 스웨터</p>
+              <div class="shopping_four_price">
+                <h1>28%</h1>
+                <p class="shopping_price">39,900 <span>원</span></p>
+                <h2>55,000원</h2>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 무료배송 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list4.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>여성 워셔블 울 미들 게이지 크루넥 스웨터</p>
+              <div>
+                <p class="shopping_price">299,900 <span>원</span></p>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 무료배송 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list5.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>여성 더블 페이스 니트 셔츠</p>
+              <div>
+                <p class="shopping_price">299,900 <span>원</span></p>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 무료배송 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list6.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>여성 워셔블 울 하이 게이지 크루넥 가디건</p>
+              <div>
+                <p class="shopping_price">299,900 <span>원</span></p>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 할인 상품 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list7.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>[남녀공용]워셔블 따뜻한 · 풀오버 파카</p>
+              <div class="shopping_four_price">
+                <h1>28%</h1>
+                <p class="shopping_price">39,900 <span>원</span></p>
+                <h2>55,000원</h2>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 할인 상품 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list8.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>여성 · UV 컷 리브 · 5부소매 폴로 스웨터</p>
+              <div class="shopping_four_price">
+                <h1>28%</h1>
+                <p class="shopping_price">39,900 <span>원</span></p>
+                <h2>55,000원</h2>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 할인 상품 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list9.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>남성 안데스 울 케이블 크루넥 스웨터</p>
+              <div class="shopping_four_price">
+                <h1>28%</h1>
+                <p class="shopping_price">39,900 <span>원</span></p>
+                <h2>55,000원</h2>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 무료배송 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list10.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>남성 야크 크루넥 스웨터</p>
+              <div>
+                <p class="shopping_price">299,900 <span>원</span></p>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 할인 상품 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list11.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>남성 · 워셔블 울 미들 게이지 · 하프 집업 스웨터</p>
+              <div class="shopping_four_price">
+                <h1>28%</h1>
+                <p class="shopping_price">39,900 <span>원</span></p>
+                <h2>55,000원</h2>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 무료배송 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list12.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>야크 혼방 울 고무뜨기 · 크루넥 스웨터</p>
+              <div>
+                <p class="shopping_price">299,900 <span>원</span></p>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 무료배송 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list13.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>[남성 · 메리노 울 자카드 패턴 · 크루넥 스웨터</p>
+              <div>
+                <p class="shopping_price">299,900 <span>원</span></p>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 할인 상품 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list14.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>남성 워싱 옥스포드 버튼다운 긴소매 셔츠</p>
+              <div class="shopping_four_price">
+                <h1>28%</h1>
+                <p class="shopping_price">39,900 <span>원</span></p>
+                <h2>55,000원</h2>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 할인 상품 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list15.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>남성 · UV 컷 헴프 혼방 · 셔츠 가디건</p>
+              <div class="shopping_four_price">
+                <h1>28%</h1>
+                <p class="shopping_price">39,900 <span>원</span></p>
+                <h2>55,000원</h2>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 무료배송 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list16.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>남성 · 바람이 잘 통하는 · 스탠드 칼라 5부소매 셔츠</p>
+              <div>
+                <p class="shopping_price">299,900 <span>원</span></p>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 무료배송 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list17.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>남성 · 워셔블 리브 · 크루넥 긴소매 스웨터</p>
+              <div>
+                <p class="shopping_price">299,900 <span>원</span></p>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 할인 상품 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list18.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>[무인양품] 남성 양면 기모 플란넬 긴소매 셔츠(남성셔츠)</p>
+              <div class="shopping_four_price">
+                <h1>28%</h1>
+                <p class="shopping_price">39,900 <span>원</span></p>
+                <h2>55,000원</h2>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 할인 상품 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list19.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>남성 · 다림질이 필요없는 · 세미 와이드 칼라 긴소매 셔츠</p>
+              <div class="shopping_four_price">
+                <h1>28%</h1>
+                <p class="shopping_price">39,900 <span>원</span></p>
+                <h2>55,000원</h2>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <!-- list :: 무료배송 -->
+        <a href="shopping_view_detail.html">
+          <article class="four_list list_box">
+            <div class="shopping_img_wrap list_img_box">
+              <img src="images/shopping/list20.png" alt="shopping" title="shopping">
+            </div>
+            <div class="shopping_txt_wrap_four">
+              <p>남성 · UV 컷 저지 · 반소매 니트 폴로 셔츠</p>
+              <div>
+                <p class="shopping_price">299,900 <span>원</span></p>
+                <p class="shopping_free">무료배송</p>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <!-- pos -->
+      <div class="pos_wrap_one">
+        <button><img src="images/icon_prevBtn(slim).png" alt="pos_prev_btn"></button>
+        <div>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+        </div>
+        <button><img src="images/icon_nextBtn(slim).png" alt="pos_prev_btn"></button>
+      </div>
+
     </div>
   </section>
   
@@ -99,94 +481,92 @@
 
 
   <!-- footer -->
-  <div style="width:100%; height:100%; background-color:#E9E9E9;">
-    <footer id="footer">
-      <div class="inner">
-        <!-- logo, 개인정보처리방침 등 -->
-        <article class="footer_up_wrap">
-          <div class="logo">
-            <a href="index.html"><img src="images/logo(white).png" alt="MUJI 로고" title="MUJI 로고"></a>
-          </div>
-          <ul>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">청소년보호정책</a></li>
-            <li><a href="#">임직원 인증하기</a></li>
-            <li><a href="#">제휴문의</a></li>
-          </ul>
-        </article>
-        <!-- footer 그 외 정보 -->
-        <div class="footer_under_wrap">
-          <!--left-->
-          <div class="footer_under_left"> 
-            <article> <!--1-->
-              <p><span>롯데쇼핑 주식회사 대표이사</span>  김사무엘상현, 정준호, 강성현</p>
-              <p><span>사업장 소재지</span>  서울특별시 강남구 테헤란로 507 (삼성동, WeWork빌딩), 7층</p>
-              <p><span>통신판매업 신고</span>  2024-서울강남-04439</p>
-              <p><span>호스팅 서비스 사업자</span>  롯데쇼핑㈜ e커머스사업부</p>
-              <p>
-                <span>사업자등록번호</span>  529-85-00774 (롯데쇼핑(주) e커머스사업부)
-                <a href="#">사업자 정보 확인</a>
-              </p>
-            </article>
-            <article> <!--2-->
-              <p><span>
-                고객님의 안전거래를 위해 현금 등으로 결제 시 결제금액의 전액에 대해 저희 쇼핑몰에서 가입한
-                소비자 피해 보상보험 서비스를 이용하실 수 있습니다.
-              </span></p>
-              <p>
-                Copyright LOTTE SHOPPING Co., Ltd. e-commerce Business Division All right reserved.
-              </p>
-            </article>
-          </div> <!--END footer left-->
-          <!-- right -->
-          <div class="footer_under_right">
-            <article> <!--tel-->
-              <div>
-                <p>온라인 고객센터</p>
-                <h1>1577-2892</h1>
-                <p>muji@lotte.net</p>
-              </div>
-              <div>
-                <p>오프라인 매장 고객센터</p>
-                <h1>02&#41;2632-8470</h1>
-                <p>muji@lotte.net</p>
-              </div>
-            </article>
-            <ul>
-              <li>
-                <a href="#">
-                  <img src="images/footer_sns1.png" alt="MUJI App" title="MUJI App">
-                  <div>
-                    <p>APP</p>
-                    <p>MUJI</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/footer_sns2.png" alt="Instagram App" title="Instagram App">
-                  <div>
-                    <p>APP</p>
-                    <p>인스타그램</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/footer_sns3.png" alt="Blog App" title="Blog App">
-                  <div>
-                    <p>Blog</p>
-                    <p>블로그</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div><!--END footer right-->
+  <footer id="footer">
+    <div class="inner">
+      <!-- logo, 개인정보처리방침 등 -->
+      <article class="footer_up_wrap">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo(white).png" alt="MUJI 로고" title="MUJI 로고"></a>
         </div>
+        <ul>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">청소년보호정책</a></li>
+          <li><a href="#">임직원 인증하기</a></li>
+          <li><a href="#">제휴문의</a></li>
+        </ul>
+      </article>
+      <!-- footer 그 외 정보 -->
+      <div class="footer_under_wrap">
+        <!--left-->
+        <div class="footer_under_left"> 
+          <article> <!--1-->
+            <p><span>롯데쇼핑 주식회사 대표이사</span>  김사무엘상현, 정준호, 강성현</p>
+            <p><span>사업장 소재지</span>  서울특별시 강남구 테헤란로 507 (삼성동, WeWork빌딩), 7층</p>
+            <p><span>통신판매업 신고</span>  2024-서울강남-04439</p>
+            <p><span>호스팅 서비스 사업자</span>  롯데쇼핑㈜ e커머스사업부</p>
+            <p>
+              <span>사업자등록번호</span>  529-85-00774 (롯데쇼핑(주) e커머스사업부)
+              <a href="#">사업자 정보 확인</a>
+            </p>
+          </article>
+          <article> <!--2-->
+            <p><span>
+              고객님의 안전거래를 위해 현금 등으로 결제 시 결제금액의 전액에 대해 저희 쇼핑몰에서 가입한
+              소비자 피해 보상보험 서비스를 이용하실 수 있습니다.
+            </span></p>
+            <p>
+              Copyright LOTTE SHOPPING Co., Ltd. e-commerce Business Division All right reserved.
+            </p>
+          </article>
+        </div> <!--END footer left-->
+        <!-- right -->
+        <div class="footer_under_right">
+          <article> <!--tel-->
+            <div>
+              <p>온라인 고객센터</p>
+              <h1>1577-2892</h1>
+              <p>muji@lotte.net</p>
+            </div>
+            <div>
+              <p>오프라인 매장 고객센터</p>
+              <h1>02&#41;2632-8470</h1>
+              <p>muji@lotte.net</p>
+            </div>
+          </article>
+          <ul>
+            <li>
+              <a href="#">
+                <img src="images/footer_sns1.png" alt="MUJI App" title="MUJI App">
+                <div>
+                  <p>APP</p>
+                  <p>MUJI</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/footer_sns2.png" alt="Instagram App" title="Instagram App">
+                <div>
+                  <p>APP</p>
+                  <p>인스타그램</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/footer_sns3.png" alt="Blog App" title="Blog App">
+                <div>
+                  <p>Blog</p>
+                  <p>블로그</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div><!--END footer right-->
       </div>
-    </footer>
-</div>
+    </div>
+  </footer>
 
 
 <script>

@@ -39,7 +39,21 @@ body::-webkit-scrollbar-thumb {
 .list_box:hover .list_img_box img {
   transform:scale(1.2);
 }/*END list 항목 호버 시 동작효과*/
-
+::placeholder {
+  color:#767676;
+  line-height:1.5;
+  font-family:"Pretendard";
+}
+select, button, label {
+  cursor: pointer;
+}
+select.option_select {
+  color:#1b1b1f;
+  line-height:1.5;
+  font-family:"Pretendard";
+  appearance:none;
+  background:url('../images/icon_under_arrow\(black\).png') no-repeat 94% 50%/18px auto;
+}
 
 
 
