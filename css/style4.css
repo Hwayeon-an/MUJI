@@ -1,0 +1,346 @@
+@charset "UTF-8";
+/* 미니멀의 삶 페이지 css입니다 */
+/* 하단에는 Note View pages css입니다.*/
+
+#minimal {
+  width:100%;
+  height:868px;
+  background: url('../images/banner_god.png') center/cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+
+  padding-top:128px;
+}
+#minimal > .inner {
+  width:1200px;
+  margin:auto;
+  padding:0 5px;
+}
+/* 어째서 기분이 좋은 것일까 */
+.minimal_happy {
+  width:544px; 
+  height:178px;
+  background-color:white;
+  padding:32px 24px 32px 84px;
+  color:#1D1D1F;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+}
+.minimal_happy h1 {
+  font-size:38px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.people_is {
+  font-size:18px;
+  color:#f4f4f4;
+  padding:52px 0 0 200px;
+  line-height: 1.5;
+}
+.people_is > span {
+  display:inline-block;
+  margin-top:42px;
+}
+
+
+
+/* 무지의 이야기가 궁금하다면? */
+#muji_info_more {
+  width:100%;
+  margin:32px 0 140px 0;
+}
+#muji_info_more > .inner {
+  width:1200px;
+  padding:0 5px;
+  margin:auto;
+}
+#muji_info_more .muji_info_banner_wrap {
+  width:100%;
+  height:100px;
+  border-radius: 20px;
+  background: url('../images/banner_minimal\(row\).png') center/cover;
+  color:#f4f4f4;
+  padding:0 42px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.muji_info_banner_wrap p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.muji_info_banner_wrap a {
+  color:#f4f4f4;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.muji_info_banner_wrap a img {
+  width:16px;
+  height:16px;
+}
+
+
+/* Note 리스트 세부 css */
+.note_txt {
+  margin:22px 26px;
+}
+.note_txt > p {
+  font-size:20px;
+  font-weight: 600;
+  color:#1D1D1F;
+  width:326px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+.note_txt > div > p {
+  color:#767676;
+  margin-top:4px;
+}
+
+
+/* Note header txt */
+.info_header_txt {
+  width:100%;
+  padding-left:8px;
+  margin-top:140px;
+}
+.info_header_txt > h1 {
+  font-size:42px;
+  font-weight:700;
+  color:#1D1D1F;
+}
+/* note list =================================================*/
+.note_list {
+  width:100%;
+  height:auto;
+  margin-top:32px;
+ 
+  display: flex;
+  gap:62px 24px;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-content:space-between;
+}
+
+/* three card list */
+.three_list {
+  /* width:32%; */
+  width:380px;
+  height: 398px;
+  background-color:white;
+  border:solid 1px #EDECEF;
+  border-radius:20px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* list pos wrap 2번째 */
+.pos_wrap {
+   width:100%;
+   margin-top:92px;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+.pos_wrap > div {
+  display:flex;
+  gap:8px;
+}
+.pos_wrap button{
+  width:42px;
+  height:42px;
+  border:solid 1px #ccc;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size:18px;
+  font-weight:500;
+  cursor:pointer;
+}
+.pos_wrap > button{
+  margin:0 22px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  transition:.3s;
+}
+.pos_wrap > button:hover {
+  background-color: #EDECEF;
+}
+.pos_wrap > button img {
+  width:24px;
+  height:24px;
+}
+/* 2번째 위치 */
+.pos_wrap > div > button:nth-child(2) {
+  background-color: #7F0019;
+  border: #7F0019 solid 1px;
+  color:white;
+}
+
+
+
+
+
+/* note view */
+#noteView {
+  width:100%;
+  height:auto;
+  margin-top:128px;
+  padding-bottom:140px;
+}
+#noteView .inner {
+  width:1200px;
+  margin:auto;
+  padding:0 5px;
+}
+#noteView .note_title {
+  width:100%;
+  padding:32px 0;
+  border-bottom:solid 1px #ccc;
+}
+#noteView .note_title > h1 { /*note view title*/
+  font-size:42px;
+  font-weight:600;
+  color:#1D1D1F;
+  line-height:1.5;
+  width:100%;
+}
+#noteView .note_title > article { /*note view 부가적인 정보*/
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+}
+#noteView .note_title > article > div {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+}
+
+#noteView .note_title > article > div:nth-child(1) p {/*view, date*/
+  color:#767676;
+}
+#noteView .note_title > article > div:nth-child(2) button { /*like, share button*/
+  width:60px;
+  height:60px;
+  border-radius: 90px;
+  background: transparent;
+  border:solid 2px #EDECEF;
+  box-shadow:0 4px 4px rgba(0,0,0,0.05);
+}
+#noteView .note_title > article > div:nth-child(2) button img {
+  width:42px;
+  height:42px;
+}
+
+
+/* 안에 내용들 */
+.w854 {
+  width:854px;
+  margin:auto;
+  margin-top:108px;
+}
+.w854 > .note_txt1 {
+  text-align:center;
+  margin-bottom:72px;
+}
+.w854 > .note_txt1 > span {
+  font-weight:600;
+}
+.w854 > .note_txt2 {
+  margin:72px 0;
+}
+.w854 > .note_txt3 {
+  font-size:18px;
+  font-weight: 600;
+  color:#1d1d1f;
+  padding-bottom:32px;
+}
+/*중복*/
+.w854 > .note_img2,
+.w854 > .note_img3,
+.w854 > .note_txt4 { 
+  margin-bottom:72px;
+}
+.w854 img {
+  width:854px;
+}
+
+.note_view_hr {
+  width:100%;
+  height:1px;
+  background-color:#ccc;
+  margin-top:200px;
+  margin-bottom:130px;
+}
+
+/* 이전글 다음글 */
+.note_side_btn {
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.note_side_btn button {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  border:none;
+  background-color:transparent;
+  outline:none;
+  cursor: pointer;
+}
+.note_side_btn button > img {
+  width:34px;
+  height:34px;
+}
+.note_side_btn button > p {
+  font-size:32px;
+  font-weight: 600;
+  color:#1D1D1F;
+}
+/* 이전글, 다음글 */
+.note_other_list {
+  width:100%;
+  margin-top:24px;
+
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap:24px;
+}
+/* two list */
+.note_other_list .two_list {
+  height:398px;
+  width:583px;
+  overflow:hidden;
+  border-radius: 20px;
+  background-color: white;
+  border:solid 1px #EDECEF;
+}
+.note_other_list .two_list > .two_list_img_wrap {
+  width:100%;
+  height:296px;
+  border-bottom:solid 1px #EDECEF;
+}
+.note_other_list .two_list > .two_list_img_wrap > img {
+  width:100%;
+  height:100%;
+}
+.note_other_list .two_list img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.note_other_list .two_list .note_txt {
+  margin:22px 0 22px 26px;
+}
+
+
+

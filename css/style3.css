@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/* What is MUJI? 페이지 입니다. */
+
+/* 전체 */
+#whatIs_Muji {
+    margin:128px 0 140px 0;
+}
+#whatIs_Muji > .inner {
+    width:1200px;
+    padding:0 5px;
+    margin:auto;
+}
+#whatIs_Muji .what_sec1 { /*what is muji*/
+    width:100%;
+    position:relative;
+}
+#whatIs_Muji .what_sec1 div {
+    width:690px;
+    height:516px;
+    border-radius: 20px;
+    overflow:hidden;
+    margin-left:auto;
+}
+#whatIs_Muji .what_sec1 div img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+#whatIs_Muji .what_sec1_txt_Wrap {
+    position: absolute;
+    top:108px;
+}
+#whatIs_Muji .what_sec1_txt_Wrap  h1{
+    font-size:100px;
+    font-weight:800;
+}
+#whatIs_Muji .what_sec1_txt_Wrap  p{
+    color:#1D1D1F;
+    font-size:18px;
+}
+
+/*변하지 않는 세가지 기본 원칙*/
+#what_three_point {
+    width:100%;
+    padding:42px 0;
+    background-color:#F9F9F9;
+    border-radius:20px;
+    margin-top:42px;
+    text-align:center;
+}
+#what_three_point p {
+    font-size:18px;
+    font-weight: 500;
+    color:#333333;
+}
+#what_three_point > div {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    gap:24px;
+    margin-top:22px;
+}
+#what_three_point > div > p {
+    padding:0 20px;
+    line-height:50px;
+    border-radius:20px;
+    font-size:18px;
+    color:#7F0019;
+    border:solid 1px #7F0019;
+    background-color:#7F001910;
+}
+
+
+/*설립목표*/
+#what_goal_wrap {
+    margin-top:140px;
+}
+#what_goal_wrap > div:nth-child(1) h1 {
+    font-size:42px;
+    font-weight: 800;
+    padding-left:8px;
+}
+.what_three_keyword_wrap { /*설립목표 3가지 키워드(아이콘)*/
+    margin-top:32px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+.what_three_keyword_wrap > div {
+    width:33.33%;
+    height:302px;
+    border:solid 1px #EDECEF;
+    border-radius: 20px;
+    padding:44px 0 50px 0;
+
+    text-align:center;
+}
+.what_three_keyword_wrap > div p {
+    margin-top:36px;
+    font-weight:bold;
+}
+#what_goal_wrap > p {
+    margin-top:52px;
+    padding-left:8px;
+    color:#333;
+}
+#what_goal_wrap > p > span{
+    color:#7F0019;
+}
+/* CHECK! */
+#what_check {
+    margin-top:168px;
+}
+#what_check .what_check_box {
+    width:100%;
+    border: solid 1px #EDECEF;
+    border-radius:20px;
+    overflow:hidden;
+    
+}
+.what_check_box > article {
+    width:100%;
+    height:100px;
+    border-radius:20px 20px 0 0;
+    padding-left:52px;
+    background-color:#111;
+    color:#ccc;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 42px;
+}
+.what_check_box > article p:nth-of-type(1){
+    font-size:20px;
+}
+.what_check_box > article p:nth-of-type(2){
+    font-size:18px;
+}
+.what_check_box > article p:nth-of-type(2) b,
+.what_check_box > article p:nth-of-type(2) span {
+    color:#f4f4f4;
+    font-weight:600;
+}
+.what_check_box > article p:nth-of-type(2) span {
+    position:relative;
+}
+.what_check_box > article p:nth-of-type(2) span::after {
+    content:"";
+    width:100%;
+    height: 1px;
+    background-color: #f4f4f4;
+    border-radius:30px;
+    position:absolute;
+    bottom:-4px;
+    left:0;
+}
+#what_check .what_check_box > p {
+    padding:42px 0 42px 52px;
+}
+#what_check .what_check_box > p > span {
+    color:#7F0019;
+    font-weight: 600;
+}
+#what_check > p:nth-of-type(1) {
+    margin:52px 0 54px;
+    padding-left:8px;
+    color:#333;
+}
+#what_check > p:nth-of-type(2) {
+    padding-left:8px;
+    color:#333;
+}

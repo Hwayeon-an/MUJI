@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/* LOGIN pages */
+
+#login {
+  min-width:1200px;
+  padding-top:128px;
+  padding-bottom:140px;
+}
+#login .inner {
+  width:1200px;
+  margin:auto;
+  padding:0 5px;
+}
+.w846 {
+  width:846px;
+  border:solid 1px #E1E1E1;
+  padding:120px 84px;
+  margin:auto;
+  border-radius:30px;
+  text-align:center;
+}
+.w846 > h1,
+.w846 > h1 span {
+  font-size:32px;
+  font-weight: 500;
+}
+.w846 > h1 > span {
+  font-weight: 600;
+}
+.w678 {
+  width:678px;
+  margin:auto;
+  margin-top:52px;
+}
+.w678 > .login_wrap > input {
+  width:100%;
+  height: 70px;
+  padding-left:32px;
+  border-radius: 20px;
+  border:solid 2px #EDECEF;
+  font-family: "Pretendard";
+  font-size:18px;
+}
+.w678 > .login_wrap > input:not(:first-child) {
+  margin-top:16px;
+}
+.login_warning_id, .login_warning_pw {
+  text-align:left;
+  padding-left:8px;
+  padding-top:4px;
+  color:#7f0019;
+  display: none;
+}
+.login_warning_id::before, .login_warning_pw::before {
+  content: "* ";
+  color:#7f0019;
+  vertical-align:text-top;
+}
+/*아이디 저장*/
+.remember_login {
+  margin-top:16px;
+  padding:0 8px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.remember_login > div {
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.remember_login > div > input {
+  display:none;
+}
+.remember_login > div > input+label {
+  width:20px;
+  height:20px;
+  background:url('../images/checkbox\(off\).png') no-repeat center/cover;
+}
+.remember_login > div > input:checked+label {
+  background:url('../images/checkbox\(checked\).png') no-repeat center/cover;
+}
+.remember_login > a {
+  color:#333;
+}
+.login_wrap > button {
+  width:100%;
+  height:70px;
+  background-color:#7f0019;
+  font-size:18px;
+  font-weight:600;
+  color:#f4f4f4;
+  border-radius: 20px;
+  margin-top:52px; 
+  outline:none;
+  border:none;
+} 
+/* sns login */
+.sns_login {
+  width: 100%;
+  margin-top:36px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.sns_login > article {
+  width:326px;
+  height:70px;
+  border:solid 1px #EDECEF;
+  border-radius: 20px;
+  padding-left:100px;
+
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  gap:8px;
+}
+.sns_box > img {
+  width:32px;
+  height:32px;
+}
+.sns_box > p {
+  color:#1b1b1f;
+  line-height:1.5;
+}
+/*  */
+.login_not_member {
+  margin-top:90px;
+  text-align:center;
+}
+.login_not_member > a {
+  color:#7f0019;
+  text-decoration: underline;
+  text-underline-position : under; /* 밑줄 위치, 파이어폭스 for android, safari for IOS 지원안함 */
+  text-underline-offset : 4px; /* 밑줄 위치, 파이어폭스, 오페라 for android 지원안함 */
+  /* 아님 보더바텀에 패딩 주던가, 라인 헤이트를 넓히던가! */
+  font-size:18px;
+  font-weight:500;
+  line-height:1.5;
+}
