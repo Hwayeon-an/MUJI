@@ -286,6 +286,12 @@
   outline: none;
   box-shadow:0 4px 4px rgba(0,0,0,0.05);
 }
+.likeIcon_off {
+  display:inline-block;
+}
+.likeIcon_on {
+  display:none;
+}
 .like_and_share button img {
   width:42px;
   height:42px;
@@ -448,6 +454,8 @@ input[id=product_color_radio3]:checked+label {
   color:#7f0019;
   font-weight:700;
   padding-left:8px;
+  display:flex;
+  align-items:baseline;
 }
 .total_price h1 span {
   font-size:18px;
@@ -723,6 +731,7 @@ input[id=product_color_radio3]:checked+label {
   width:30px;
   height:30px;
   margin-right:52px;
+  transition:.3s;
 }
 .qna_box > div > span {
   display:inline-block;
@@ -760,22 +769,43 @@ input[id=product_color_radio3]:checked+label {
 /* 관리자 답변 */
 .admin_qna {
   width:100%;
-  padding:50px 40px;
   background-color: #F1F1F1;
   border-bottom:solid 1px #ccc;
+  
+  max-height:0;
+  overflow:hidden;
+  transition:.3s ease-out;
 }
-.admin_qna div {
+.admin_qna > .wrap {
+  width:100%;
+  padding:50px 40px;
+}
+.admin_qna > .wrap div {
   display:flex;
   gap:12px;
   align-items:center;
 }
-.admin_qna div b {
+.admin_qna > .wrap div b {
   font-size:18px;
 }
-.admin_qna div b,
-.admin_qna div p {
+.admin_qna > .wrap div b,
+.admin_qna > .wrap div p {
   line-height: 1.5;
 }
-.admin_qna div:last-child {
+.admin_qna > .wrap div:last-child {
   margin-top:32px;
 }
+/*js추가
+
+.admin_qna {
+  padding:0;
+  max-height: 0;
+  overflow:hidden;
+  transition:.3s ease-out;
+}
+.admin_qna {
+  width:100%;
+  padding:50px 40px;
+  background-color: #F1F1F1;
+  border-bottom:solid 1px #ccc;
+}*/
