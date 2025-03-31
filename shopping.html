@@ -81,7 +81,7 @@
       <!--의류 가구 탭-->
       <div class="shopping_ca_tab">
         <button class="shopping_active">의류</button>
-        <button>가구</button>
+        <button><a class="big_tab" href="shopping_furniture.html">가구</a></button>
       </div>
       <!-- 쇼핑 카테고리 탭 -->
       <ul class="shopping_ca_tab2">
@@ -91,7 +91,7 @@
         <li><a href="#">패션소품</a></li>
         <li><a href="#">신발</a></li>
         <li><a href="#">겨울준비</a></li>
-        <li><a href="#">인기상품</a></li>
+        <li><a href="shopping_hot.html">인기상품</a></li>
         <li><a href="#">Sale</a></li>
       </ul>
 
@@ -583,6 +583,32 @@
   search_close.addEventListener('click', function(){
     search_box.style.opacity = 0;
     search_box.style.visibility = "hidden";
+  });
+
+
+  //수량 옵션
+  const minusBtn = document.querySelector(".p_minus");
+  const plusBtn = document.querySelector(".p_plus");
+  const pQue = document.querySelector(".p_que_value");
+  let queValue = parseInt(pQue.value);
+  let price = document.querySelector(".total_price > h1 > p");
+
+  //빼기
+  minusBtn.addEventListener("click", function(){
+    if( queValue > 1 ){
+      queValue--;
+      pQue.value = queValue;
+    }else{
+      alert('최소 수량은 1입니다.');
+    }
+  });
+
+  //더하기
+  plusBtn.addEventListener("click", function(){
+      queValue += 1;
+      pQue.value = queValue;
+
+      console.log(parseInt(price.innerText));
   });
 </script>
 </body>

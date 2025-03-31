@@ -91,7 +91,10 @@
             <p>Date : 2025.02.07</p>
           </div>
           <div>
-            <button><img src="images/icon_like.png" alt="like" title="like"></button>
+            <button>
+              <img src="images/icon_like(off).png" alt="like" title="like" class="likeIcon_off">
+              <img src="images/icon_like.png" alt="like" title="like" class="likeIcon_on">
+            </button>
             <button><img src="images/icon_share.png" alt="Share" title="Share"></button>
           </div>
         </article>
@@ -288,6 +291,27 @@
     search_box.style.opacity = 0;
     search_box.style.visibility = "hidden";
   });
+
+
+
+  let likeOn = document.querySelector(".likeIcon_on");
+  let likeOff = document.querySelector(".likeIcon_off");
+  let likeBtn = document.querySelector(".note_title button");
+
+  likeBtn.addEventListener("click", function(){
+    let isHidden = getComputedStyle(likeOn).display === "none";
+    //console.log(isHidden);
+
+    if(isHidden){
+      likeOn.style.display = "inline-block";
+      likeOff.style.display = "none";
+    }else{
+      likeOn.style.display = "none";
+      likeOff.style.display = "inline-block";
+    }
+  });
+
+
 </script>
 </body>
 </html>

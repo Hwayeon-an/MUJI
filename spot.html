@@ -16,6 +16,29 @@
 </head>
 <body>
 
+
+  <!-- 오프라인 매장 자세히보기 -->
+  <div class="offline_detail_view_popup">
+    <button class="offline_close"><img src="images/icon_close.png" alt="close"></button>
+    <div class="offline_box_white">
+      <h1 class="offline_title">잠실 롯데몰</h1>
+      <div class="offline_img_box">
+        <img src="" alt="offline">
+      </div>
+      <article class="offline_info_wrap">
+        <p class="offline_address"><b>Address.</b> &nbsp; 서울 송파구 올림픽로 300 롯데월드몰 지하1층</p>
+        <p class="offline_tel"><b>TEL.</b> &nbsp; 02-2632-8470</p>
+        <p class="offline_etc">
+          주차 공간&nbsp; : &nbsp;<span>있음</span> <br>
+          대중교통&nbsp; : &nbsp;<span>지하철, 버스 모두 가능</span> <br>
+          손님 밀집도&nbsp; : &nbsp;<span>양호</span> <br>
+          접근성&nbsp; : &nbsp;<span>좋음</span> <br>
+          피팅룸&nbsp; : &nbsp;<span>마련되어 있음</span>
+        </p>
+      </article>
+    </div>
+  </div>
+
   <!--Back to the Top-->
   <button class="top_btn" onclick="location.href='#'">
     <img src="images/backtothetop.png" alt="top" title="top">
@@ -95,7 +118,7 @@
     <!-- spot list container -->
     <div class="spot_list">
       <!-- [line start] list -->
-      <a href="event_view.html">
+      <!--<a href="event_view.html">-->
         <article class="two_list list_box">
           <div class="shopping_img_wrap list_img_box">
             <img src="images/spot/spot_img1.png" alt="shopping" title="shopping">
@@ -107,9 +130,9 @@
             </div>
           </div>
         </article>
-      </a>
+      <!--</a>-->
       <!-- [line start] list -->
-      <a href="event_view.html">
+      <!--<a href="event_view.html">-->
         <article class="two_list list_box">
           <div class="shopping_img_wrap list_img_box">
             <img src="images/spot/spot_img2.png" alt="shopping" title="shopping">
@@ -121,9 +144,10 @@
             </div>
           </div>
         </article>
-      </a>
+      <!--</a>-->
       <!-- [line start] list -->
-      <a href="event_view.html">
+      
+      <!--<a href="event_view.html">-->
         <article class="two_list list_box">
           <div class="shopping_img_wrap list_img_box">
             <img src="images/spot/spot_img3.png" alt="shopping" title="shopping">
@@ -135,9 +159,10 @@
             </div>
           </div>
         </article>
-      </a>
+      <!--</a>-->
       <!-- [line start] list -->
-      <a href="event_view.html">
+      
+      <!--<a href="event_view.html">-->
         <article class="two_list list_box">
           <div class="shopping_img_wrap list_img_box">
             <img src="images/spot/spot_img4.png" alt="shopping" title="shopping">
@@ -149,9 +174,10 @@
             </div>
           </div>
         </article>
-      </a>
+      <!--</a>-->
       <!-- [line start] list -->
-      <a href="event_view.html">
+      
+      <!--<a href="event_view.html">-->
         <article class="two_list list_box">
           <div class="shopping_img_wrap list_img_box">
             <img src="images/spot/spot_img5.png" alt="shopping" title="shopping">
@@ -163,9 +189,10 @@
             </div>
           </div>
         </article>
-      </a>
+      <!--</a>-->
       <!-- [line start] list -->
-      <a href="event_view.html">
+      
+      <!--<a href="event_view.html">-->
         <article class="two_list list_box">
           <div class="shopping_img_wrap list_img_box">
             <img src="images/spot/spot_img6.png" alt="shopping" title="shopping">
@@ -177,9 +204,10 @@
             </div>
           </div>
         </article>
-      </a>
+      <!--</a>-->
       <!-- [line start] list -->
-      <a href="event_view.html">
+      
+      <!--<a href="event_view.html">-->
         <article class="two_list list_box">
           <div class="shopping_img_wrap list_img_box">
             <img src="images/spot/spot_img7.png" alt="shopping" title="shopping">
@@ -191,9 +219,10 @@
             </div>
           </div>
         </article>
-      </a>
+      <!--</a>-->
       <!-- [line start] list -->
-      <a href="event_view.html">
+      
+      <!--<a href="event_view.html">-->
         <article class="two_list list_box">
           <div class="shopping_img_wrap list_img_box">
             <img src="images/spot/spot_img8.png" alt="shopping" title="shopping">
@@ -205,9 +234,10 @@
             </div>
           </div>
         </article>
-      </a>
+      <!--</a>-->
       <!-- [line start] list -->
-      <a href="event_view.html">
+      
+      <!--<a href="event_view.html">-->
         <article class="two_list list_box">
           <div class="shopping_img_wrap list_img_box">
             <img src="images/spot/spot_img9.png" alt="shopping" title="shopping">
@@ -219,9 +249,10 @@
             </div>
           </div>
         </article>
-      </a>
+      <!--</a>-->
       <!-- [line start] list -->
-      <a href="event_view.html">
+      
+      <!--<a href="event_view.html">-->
         <article class="two_list list_box">
           <div class="shopping_img_wrap list_img_box">
             <img src="images/spot/spot_img10.png" alt="shopping" title="shopping">
@@ -233,7 +264,7 @@
             </div>
           </div>
         </article>
-      </a>
+      <!--</a>-->
     </div>
 
 
@@ -368,6 +399,54 @@
   search_close.addEventListener('click', function(){
     search_box.style.opacity = 0;
     search_box.style.visibility = "hidden";
+  });
+
+
+
+
+  // article box를 클릭하면
+  // 그 안에 img src / note_txt > p / note_txt > div > p 를 가져옴
+  // 그리고 모달창을 열음 opacity
+  // 그 안에 해당 각 맞는 태그에 넣기
+  // close버튼 누르면 모달창이 다시 닫힘
+  let articleBoxAll = document.querySelectorAll(".spot_list > .list_box"); // 아티클 박스
+  //let offlineImg = document.querySelectorAll(".list_img_box > img"); // 아티클 박스 이미지
+  //let offlineTitle = document.querySelectorAll(".note_txt > p"); // 매장 이름
+  //let offlineAddress = document.querySelectorAll(".note_txt > div > p"); // 매장 주소
+  
+  let offlinePopup = document.querySelector(".offline_detail_view_popup");
+  let offlinePTitle = document.querySelector(".offline_title");
+  let offlinePImg = document.querySelector(".offline_img_box > img");
+  let offlinePaddress = document.querySelector(".offline_address");
+  let offlineClose = document.querySelector(".offline_close");
+
+    // 개쩐다 안화연 ㅋ
+  articleBoxAll.forEach((aBox, i) =>{
+    aBox.addEventListener("click", ()=>{
+      
+      // 클릭한 아티클이 가진 이미지 태그
+      let choiceImg = aBox.querySelector(".list_img_box").children[0].src.split("/").pop();
+      let choiceTitle = aBox.querySelector(".note_txt > p").innerText;
+      let choiceAddress = aBox.querySelector(".note_txt > div > p").innerText;
+      
+      // 모달창 열자~
+      offlinePopup.style.opacity = "1";
+      offlinePopup.style.visibility = "visible";
+
+      // 모달창 타이틀 열자~
+      offlinePTitle.innerText = choiceTitle;
+
+      // 모달창 이미지 넣자~
+      offlinePImg.src = `images/spot/${choiceImg}`;
+
+      // 모달창 주소 넣자~
+      offlinePaddress.innerText = choiceAddress;      
+    });
+  });
+
+  offlineClose.addEventListener("click", ()=>{
+      offlinePopup.style.opacity = "0";
+      offlinePopup.style.visibility = "hidden";
   });
 </script>
 </body>

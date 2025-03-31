@@ -79,16 +79,41 @@
   <!-- Main Banner -->
   <section id="main_banner">
     <div class="inner_banner">
+      <!-- slide -->
+      <div class="slideImg_wrap">
+        <img src="images/main_banner1.png" alt="slide" title="slide">
+        <img src="images/main_banner2.png" alt="slide" title="slide">
+        <img src="images/main_banner3.png" alt="slide" title="slide">
+      </div>
       <article>
-        <p>집에서도 관리가 쉽고, 매일 편안하게 입을 수 있는</p>
-        <h1>
-          SOFT PANTS <br>
-          COLLECTION
-        </h1>
+        <article class="slideTxt_wrap">
+          <!--slide txt-->
+          <article>
+            <p>집에서도 관리가 쉽고, 매일 편안하게 입을 수 있는</p>
+            <h1>
+              SOFT PANTS <br>
+              COLLECTION
+            </h1>
+          </article>
+          <article>
+            <p>깔끔하고 가벼운 워싱 데님과 유행에 따라가지 않는 루즈핏의 조화</p>
+            <h1>
+              Washed PANTS <br>
+              Loose Fit
+            </h1>
+          </article>
+          <article>
+            <p>2025 청청패션을 담다. 세부적인 디테일이 담겨진 데님 세트</p>
+            <h1>
+              Double Denim <br>
+              2025 Series
+            </h1>
+          </article>
+        </article>
         <div class="indicator">
-          <button><img src="images/icon_prevBtn(slim).png" alt="Indicator_prev"></button>
-          <p> 1 <span>/ 3</span> </p>
-          <button><img src="images/icon_nextBtn(slim).png" alt="Indicator_prev"></button>
+          <button class="slide_prevbtn"><img src="images/icon_prevBtn(slim).png" alt="Indicator_prev"></button>
+          <p> <span class="indicator_now">1</span> <span>/ 3</span> </p>
+          <button class="slide_nextbtn"><img src="images/icon_nextBtn(slim).png" alt="Indicator_prev"></button>
         </div>
       </article>
     </div>
@@ -149,74 +174,142 @@
         <h1>신상품</h1>
         <!-- indicator -->
         <div class="new_indicator">
-          <p> 1 <span> / 3</span> </p>
-          <button><img src="images/icon_prevBtn(slim).png" alt="Indicator_prev"></button>
-          <button><img src="images/icon_nextBtn(slim).png" alt="Indicator_prev"></button>
+          <p> <span class="new_indicator_now">1</span> <span> / 3</span> </p>
+          <div>
+            <button class="active_button new_prev_btn"><img src="images/icon_prevBtn(slim).png" alt="Indicator_prev"></button> <!--disable_button-->
+            <button class="active_button new_next_btn"><img src="images/icon_nextBtn(slim).png" alt="Indicator_prev"></button>
+          </div>
         </div>
       </div>
 
       <!-- new Shopping List -->
       <div class="mNew_list">
         <div class="mNew_abs_box">
-          <!-- list -->
-          <article class="shopping_list list_box">
-            <div class="shopping_img_wrap list_img_box">
-              <img src="images/banner_list1.PNG" alt="shopping" title="shopping">
-            </div>
-            <div class="shopping_txt_wrap">
-              <p>여성 케이폭 혼방 이중 가제 퀄팅 재킷 </p>
-              <div>
-                <p class="shopping_price">69,900 <span>원</span></p>
+          <!-- list 1 -->
+          <a href="shopping_view_detail.html">
+            <article class="shopping_list list_box">
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list1.PNG" alt="shopping" title="shopping">
               </div>
-            </div>
-          </article>
-          <!-- list :: 무료배송 -->
-          <article class="shopping_list list_box">
-            <div class="shopping_img_wrap list_img_box">
-              <img src="images/banner_list2.PNG" alt="shopping" title="shopping">
-            </div>
-            <div class="shopping_txt_wrap">
-              <p>[무인양품] 라운드 암 체어ㆍ내추럴ㆍ너도밤나무</p>
-              <div>
-                <p class="shopping_price">299,900 <span>원</span></p>
-                <p class="shopping_free">무료배송</p>
+              <div class="shopping_txt_wrap">
+                <p>여성 케이폭 혼방 이중 가제 퀄팅 재킷 </p>
+                <div>
+                  <p class="shopping_price">69,900 <span>원</span></p>
+                </div>
               </div>
-            </div>
-          </article>
-          <!-- list :: 할인 상품 -->
-          <article class="shopping_list list_box">
-            <div class="shopping_img_wrap list_img_box">
-              <img src="images/banner_list3.PNG" alt="shopping" title="shopping">
-            </div>
-            <div class="shopping_txt_wrap">
-              <p>[무인양품] 남성 사이드 심리스 이중가제 긴소매 파자마 (커플잠옷)</p>
-              <div>
-                <h1>28%</h1>
-                <p class="shopping_price">39,900 <span>원</span></p>
-                <h2>55,000원</h2>
-                <p class="shopping_free">무료배송</p>
+            </article>
+          </a>
+          <!-- list 2 -->
+          <a href="shopping_view_detail.html">
+            <article class="shopping_list list_box">
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list9.png" alt="shopping" title="shopping">
               </div>
-            </div>
-          </article>
-          <!-- list :: 할인 상품 총 8~10개여야 해~! -->
-          <article class="shopping_list list_box">
-            <!-- overlay -->
-            <div class="shoppingList_overlay">
-              <img src="images/icon_plusBtn.png" alt="MoreBtn" title="MoreBtn">
-            </div>
-            <div class="shopping_img_wrap list_img_box">
-              <img src="images/banner_list4.PNG" alt="shopping" title="shopping">
-            </div>
-            <div class="shopping_txt_wrap">
-              <p>건조가 빠른 이지 턱 와이드 팬츠</p>
-              <div>
-                <h1>28%</h1>
-                <p class="shopping_price">57,600 <span>원</span></p>
-                <h2>80,000원</h2>
-                <p class="shopping_free">무료배송</p>
+              <div class="shopping_txt_wrap">
+                <p>세이지 스타일 셔츠 </p>
+                <div>
+                  <p class="shopping_price">49,900 <span>원</span></p>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
+          <!-- list 3 -->
+          <a href="shopping_view_detail.html">
+            <article class="shopping_list list_box">
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list10.png" alt="shopping" title="shopping">
+              </div>
+              <div class="shopping_txt_wrap">
+                <p>Atum 마가렛 쇼츠 팬츠</p>
+                <div>
+                  <p class="shopping_price">29,900 <span>원</span></p>
+                </div>
+              </div>
+            </article>
+          </a>
+          <!-- list 4 :: 무료배송 -->
+          <a href="shopping_view_detail.html">
+            <article class="shopping_list list_box">
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list11.png" alt="shopping" title="shopping">
+              </div>
+              <div class="shopping_txt_wrap">
+                <p>바텍논 페이드 데님</p>
+                <div>
+                  <p class="shopping_price">79,900 <span>원</span></p>
+                  <p class="shopping_free">무료배송</p>
+                </div>
+              </div>
+            </article>
+          </a>
+          <!-- list 5 :: 무료배송 -->
+          <a href="shopping_view_detail.html">
+            <article class="shopping_list list_box">
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list12.png" alt="shopping" title="shopping">
+              </div>
+              <div class="shopping_txt_wrap">
+                <p>피그래 글런 티셔츠</p>
+                <div>
+                  <p class="shopping_price">29,900 <span>원</span></p>
+                  <p class="shopping_free">무료배송</p>
+                </div>
+              </div>
+            </article>
+          </a>
+          <!-- list 6 :: 무료배송 -->
+          <a href="shopping_view_detail.html">
+            <article class="shopping_list list_box">
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list2.PNG" alt="shopping" title="shopping">
+              </div>
+              <div class="shopping_txt_wrap">
+                <p>[무인양품] 라운드 암 체어ㆍ내추럴ㆍ너도밤나무</p>
+                <div>
+                  <p class="shopping_price">299,900 <span>원</span></p>
+                  <p class="shopping_free">무료배송</p>
+                </div>
+              </div>
+            </article>
+          </a>
+          <!-- list 7 :: 할인 상품 -->
+          <a href="shopping_view_detail.html">
+            <article class="shopping_list list_box">
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list3.PNG" alt="shopping" title="shopping">
+              </div>
+              <div class="shopping_txt_wrap">
+                <p>[무인양품] 남성 사이드 심리스 이중가제 긴소매 파자마 (커플잠옷)</p>
+                <div>
+                  <h1>28%</h1>
+                  <p class="shopping_price">39,900 <span>원</span></p>
+                  <h2>55,000원</h2>
+                  <p class="shopping_free">무료배송</p>
+                </div>
+              </div>
+            </article>
+          </a>
+          <!-- list 8 :: 할인 상품 총 8~10개여야 해~! -->
+          <a href="shopping.html">
+            <article class="shopping_list list_box">
+              <!-- overlay -->
+              <div class="shoppingList_overlay">
+                <img src="images/icon_plusBtn.png" alt="MoreBtn" title="MoreBtn">
+              </div>
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list4.PNG" alt="shopping" title="shopping">
+              </div>
+              <div class="shopping_txt_wrap">
+                <p>건조가 빠른 이지 턱 와이드 팬츠</p>
+                <div>
+                  <h1>28%</h1>
+                  <p class="shopping_price">57,600 <span>원</span></p>
+                  <h2>80,000원</h2>
+                  <p class="shopping_free">무료배송</p>
+                </div>
+              </div>
+            </article>
+          </a>
         </div>
       </div>
     </div>
@@ -241,7 +334,7 @@
           <div class="popul_overlay_fill"></div>
           <div class="popul_overlay_gra"></div>
           <p>
-            가구 인기상품 <img src="images/icon_small_nextBtn(white).png" alt="nextBtn">
+            <a href="shopping_furniture.html">가구 인기상품 <img src="images/icon_small_nextBtn(white).png" alt="nextBtn"></a>
           </p>
         </article>
         <!-- 2 -->
@@ -249,7 +342,7 @@
           <div class="popul_overlay_fill"></div>
           <div class="popul_overlay_gra"></div>
           <p>
-            의류 인기상품 <img src="images/icon_small_nextBtn(white).png" alt="nextBtn">
+            <a href="shopping_hot.html">의류 인기상품 <img src="images/icon_small_nextBtn(white).png" alt="nextBtn"></a>
           </p>
         </article>
       </div>
@@ -268,60 +361,68 @@
 
         <div class="main_popular_list_wrap">
           <!-- list -->
-          <article class="shopping_list list_box">
-            <div class="shopping_img_wrap list_img_box">
-              <img src="images/banner_list5.PNG" alt="shopping" title="shopping">
-            </div>
-            <div class="shopping_txt_wrap">
-              <p>여성 케이폭 혼방 이중 가제 퀄팅 재킷 </p>
-              <div>
-                <p class="shopping_price">69,900 <span>원</span></p>
+          <a href="shopping_view_detail.html">
+            <article class="shopping_list list_box">
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list5.PNG" alt="shopping" title="shopping">
               </div>
-            </div>
-          </article>
+              <div class="shopping_txt_wrap">
+                <p>여성 케이폭 혼방 이중 가제 퀄팅 재킷 </p>
+                <div>
+                  <p class="shopping_price">69,900 <span>원</span></p>
+                </div>
+              </div>
+            </article>
+          </a>
           <!-- list -->
-          <article class="shopping_list list_box">
-            <div class="shopping_img_wrap list_img_box">
-              <img src="images/banner_list6.PNG" alt="shopping" title="shopping">
-            </div>
-            <div class="shopping_txt_wrap">
-              <p>여성 케이폭 혼방 이중 가제 퀄팅 재킷 </p>
-              <div>
-                <p class="shopping_price">69,900 <span>원</span></p>
+          <a href="shopping_view_detail.html">
+            <article class="shopping_list list_box">
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list6.PNG" alt="shopping" title="shopping">
               </div>
-            </div>
-          </article>
+              <div class="shopping_txt_wrap">
+                <p>여성 케이폭 혼방 이중 가제 퀄팅 재킷 </p>
+                <div>
+                  <p class="shopping_price">69,900 <span>원</span></p>
+                </div>
+              </div>
+            </article>
+          </a>
           <!-- list :: 할인 상품 -->
-          <article class="shopping_list list_box">
-            <div class="shopping_img_wrap list_img_box">
-              <img src="images/banner_list7.PNG" alt="shopping" title="shopping">
-            </div>
-            <div class="shopping_txt_wrap">
-              <p>여성 케이폭 혼방 이중 가제 퀄팅 재킷 </p>
-              <div>
-                <h1>28%</h1>
-                <p class="shopping_price">69,900 <span>원</span></p>
-                <h2>55,000원</h2>
-                <p class="shopping_free">무료배송</p>
+          <a href="shopping_view_detail.html">
+            <article class="shopping_list list_box">
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list7.PNG" alt="shopping" title="shopping">
               </div>
-            </div>
-          </article>
+              <div class="shopping_txt_wrap">
+                <p>여성 케이폭 혼방 이중 가제 퀄팅 재킷 </p>
+                <div>
+                  <h1>28%</h1>
+                  <p class="shopping_price">69,900 <span>원</span></p>
+                  <h2>55,000원</h2>
+                  <p class="shopping_free">무료배송</p>
+                </div>
+              </div>
+            </article>
+          </a>
           <!-- list -->
-          <article class="shopping_list list_box">
-            <div class="shopping_img_wrap list_img_box">
-              <img src="images/banner_list8.PNG" alt="shopping" title="shopping">
-            </div>
-            <div class="shopping_txt_wrap">
-              <p>여성 케이폭 혼방 이중 가제 퀄팅 재킷 </p>
-              <div>
-                <p class="shopping_price">69,900 <span>원</span></p>
+          <a href="shopping_view_detail.html">
+            <article class="shopping_list list_box">
+              <div class="shopping_img_wrap list_img_box">
+                <img src="images/banner_list8.PNG" alt="shopping" title="shopping">
               </div>
-            </div>
-          </article>
+              <div class="shopping_txt_wrap">
+                <p>여성 케이폭 혼방 이중 가제 퀄팅 재킷 </p>
+                <div>
+                  <p class="shopping_price">69,900 <span>원</span></p>
+                </div>
+              </div>
+            </article>
+          </a>
         </div>
       </div>
       <div class="popul_more_btn">
-        <a href="#" class="more_btn">둘러보기</a>
+        <a href="shopping_hot.html" class="more_btn">둘러보기</a>
       </div>
 
       <!-- Mail Magazine -->
@@ -329,7 +430,7 @@
         <p>Mail Magazine</p>
         <div>
           <p>소식과 다양한 브랜드 스토리를 매월 1회 10%쿠폰과 함께 보내드립니다.</p>
-          <a href="#">매일매거진 신청 <img src="images/icon_small_nextBtn(white).png"> </a>
+          <a href="magazine.html">매일매거진 신청 <img src="images/icon_small_nextBtn(white).png" alt="magazine"> </a>
         </div>
       </article>
     </div>
@@ -451,6 +552,228 @@
     search_box.style.opacity = 0;
     search_box.style.visibility = "hidden";
   });
+
+
+
+
+  // 신상품
+  let newNextBtn = document.querySelector(".new_next_btn");
+  let newPrevBtn = document.querySelector(".new_prev_btn");
+  let cardBox = document.querySelector(".mNew_abs_box");
+  let indicatorTxt = document.querySelector(".new_indicator_now"); 
+  let leftValue = 0;
+  let moveCount = 1;
+
+  //next
+  newNextBtn.addEventListener("click", function(){
+
+    if(moveCount < 3){
+
+      moveCount++;
+
+      leftValue += 95; // 변하는 값을 재할당(정해지지 않은 값)
+      cardBox.style.marginLeft = `-${leftValue}%`; // style는 += 하면 안됨! 재할당 값을 따로주고 여기는 =
+
+      indicatorTxt.innerText = moveCount; 
+    }
+  });
+
+  
+  //prev
+  newPrevBtn.addEventListener("click", function(){
+    
+    if(moveCount > 1){
+
+      moveCount--;
+
+      leftValue -= 95;
+      cardBox.style.marginLeft = `-${leftValue}%`;
+
+      indicatorTxt.innerText = moveCount;
+    }
+  });
+
+
+
+
+
+  //img slide
+  // let slideWrap = document.querySelector(".slideImg_wrap");
+  // let totalIndex = document.querySelectorAll(".slideImg_wrap img");
+  // let nowIndex = 0;
+  // let value = 1864; //한 장 크기
+  // slideWrap.style.transition = "left 0.8s ease-in-out";
+
+
+
+      const slides = document.querySelectorAll(".slideImg_wrap img");
+      const slideTxt = document.querySelectorAll(".slideTxt_wrap > article");
+      const indicator = document.querySelector(".indicator_now");
+      const prevBtn = document.querySelector(".slide_prevbtn");
+      const nextBtn = document.querySelector(".slide_nextbtn");
+
+      let currentIndex = 0;//현재 슬라이드 인덱스~
+      const intervalTime = 3000;/*3초 >3<*/
+      let slideInterval; //setInterval 담아주세용
+
+      function showSlide(index) { // 2. 초기값 0번 받고
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("show", i === index);
+          indicator.innerText = index+1;
+        });
+        slideTxt.forEach((txt, i) => {
+          txt.classList.toggle("show", i === index);
+        });
+      }
+
+      // startSlideshow() -> nextSlide() -> showSlide()
+
+      // (최종) index 몇 번째로 줄건지 계산하기 위해 + 실질적 shiwSlide함수 전달
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length; //1%3=1, 2%3=2, 3%3=0
+
+        showSlide(currentIndex);
+      }
+
+      // 자동 슬라이딩(무한반복), 얜 그냥 시작 함수 -> nextSlide() 전달
+      function startSlideShow() {
+        slideInterval = setInterval(nextSlide, intervalTime); // nextSlide함수를 3초동안 무한반복
+      }
+
+      // 얜 멈춤 함수
+      function stopSlideShow() {
+        clearInterval(slideInterval);
+      }
+
+
+      //초기 설정
+      showSlide(currentIndex); // 1. 초기값 0번 보냄
+      startSlideShow(); // 3. (1)번의 코드가 다 읽히면 실행
+
+
+
+      prevBtn.addEventListener("click", function(){
+        stopSlideShow(); // 자동 슬라이드 멈추기
+
+        if(currentIndex > 0){
+          currentIndex--;
+        }else{
+          currentIndex = slides.length-1;
+        }
+        showSlide(currentIndex);
+        console.log(currentIndex);
+
+        // 일정 시간 후 자동 슬라이드 다시 시작 (3초 뒤)
+        startSlideShow();
+      });
+
+
+      nextBtn.addEventListener("click", function(){
+        stopSlideShow();
+
+        if(currentIndex < 2){
+          currentIndex++;
+        }else{
+          currentIndex = 0;
+        }
+        showSlide(currentIndex);
+
+        startSlideShow();
+      });
+
+
+  //화연 - 슬라이딩 실패~
+  // setInterval(function(){
+  //   if(nowIndex <= totalIndex.length-1){
+  //     slideWrap.style.left = `-${nowIndex * value}px`;
+  //     console.log(nowIndex);
+  //     nowIndex++;
+  //   }else{
+  //     console.log('끝');
+  //     nowIndex = 0;
+  //     slideWrap.style.left = "0";
+  //   }
+  // }, 3000);
+
+
+
+  //미친 gpt - 슬라이딩 실패~
+//   document.addEventListener("DOMContentLoaded", function () {
+//   let slideWrap = document.querySelector(".slideImg_wrap");
+//   let slides = document.querySelectorAll(".slideImg_wrap img");
+//   let slideCount = slides.length;
+//   let nowIndex = 0;
+//   let slideWidth = document.querySelector(".inner_banner").offsetWidth;
+//   let intervalTime = 4000; // 4초마다 전환
+
+//   // 1. 가짜 첫 번째 이미지 추가 (무한 루프 효과)
+//   let cloneFirst = slides[0].cloneNode(true);
+//   slideWrap.appendChild(cloneFirst);
+
+//   // 2. 슬라이드 전체 크기 설정 (3개 + 가짜 1개)
+//   slideWrap.style.width = `${(slideCount + 1) * 100}%`;
+//   slideWrap.style.display = "flex";
+//   slideWrap.style.position = "absolute";
+//   slideWrap.style.left = "0px";
+//   slideWrap.style.transition = "left 0.8s ease-in-out";
+
+//   function moveSlide() {
+//     nowIndex++;
+
+//     if (nowIndex <= slideCount) {
+//       slideWrap.style.left = `-${nowIndex * slideWidth}px`;
+//     }
+
+//     // 3. 마지막 이미지(가짜 첫 번째)에서 첫 번째로 순간 이동
+//     if (nowIndex === slideCount) {
+//       setTimeout(() => {
+//         slideWrap.style.transition = "none"; // 애니메이션 효과 제거
+//         nowIndex = 0;
+//         slideWrap.style.left = "0px";
+//         setTimeout(() => {
+//           slideWrap.style.transition = "left 0.8s ease-in-out"; // 다시 애니메이션 적용
+//         }, 50);
+//       }, 800);
+//     }
+//   }
+
+//   // 4. 자동 슬라이드 시작
+//   setInterval(moveSlide, intervalTime);
+// });
+
+
+
+
+  //왤케 빨리넘어가?
+  //나는 일자로 쭈ㅜ우우욱하고싶은데
+
+
+  // let currentIndex = 0;
+  // const slideWrap = document.querySelector('.slideImg_wrap');
+  // const totalSlides = document.querySelectorAll('.slideImg_wrap img').length - 1; // 3개 + 가짜 1개
+
+  // function moveSlide() {
+  //   currentIndex++;
+  //   slideWrap.style.left = `-${currentIndex * 100}%`; // 100% / 4개 = 25%
+
+  //   // 마지막 슬라이드일 때(가짜 첫 번째 슬라이드 도달)
+  //   if (currentIndex === totalSlides) {
+  //     setTimeout(() => {
+  //       slideWrap.style.transition = 'none';
+  //       currentIndex = 0;
+  //       slideWrap.style.left = '0%';
+  //       setTimeout(() => {
+  //         slideWrap.style.transition = 'left 0.5s ease-in-out';
+  //       });
+  //     }, 500);
+  //   }
+  // }
+
+  // function startSlide() {
+  //   setInterval(moveSlide, 3000);
+  // }
+
+  // startSlide();
 </script>
 </body>
 </html>

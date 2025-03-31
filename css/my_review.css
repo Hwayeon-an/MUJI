@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/* My Rivew pages */
+
+.my_review {
+    min-width:1200px;
+    padding-top:128px;
+    padding-bottom:140px;
+}
+.my_review .inner {
+    width:1200px;
+    margin:auto;
+    padding:0 5px;
+}
+.review_list_wrap {
+    margin-top:42px;
+    display:flex;
+    flex-direction: column;
+    gap:42px;
+    flex-wrap:wrap;
+}
+.review_list_wrap > article {
+    height:100%;
+    padding-bottom:42px;
+    border-bottom:solid 1px #ccc;
+    display:flex;
+    flex-direction: row;
+    gap:24px;
+}
+.review_list_wrap > article > .review_list_img_box {
+    /* width:80%;
+    outline: solid 1px rgb(255, 0, 212);
+    height:100%; */
+    width:130px;
+    height:130px;
+    border-radius: 30px;
+    border:solid 1px #EDECEF;
+    overflow:hidden;
+}
+.review_list_wrap > article > .review_list_img_box img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.review_list_text_box {
+    width:1036px;
+}
+.review_page_under_star {
+    display:flex;
+    gap:4px;
+}
+/* 주문번호, 수정/삭제 */
+.review_list_text_box .order_number_box {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.review_list_text_box .order_number_box > p  {
+    padding:6px 16px;
+    max-width:218px;
+    background-color:#ECECEC;
+    border-radius:90px;
+    font-size:14px;
+}
+.order_number_box > div > a {
+    font-size:14px;
+    color:#767676;
+    padding:8px 24px;
+}
+/*review 내용*/
+.reivew_contents_box {
+    margin-top:20px;
+    padding-left:8px;
+}
+.reivew_contents_box > h1{
+    font-size:20px;
+    font-weight: 700;
+}
+.reivew_contents_box > p {
+    margin-top:12px;
+    width:100%;
+    /* 1줄 이상 시 말줄임표 */
+    max-height:72px;
+    overflow:hidden;
+    /* text-overflow: ellipsis; */
+    -webkit-line-clamp: 3; /* 최대 줄 수 지정 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+/* review under wrpa */
+.reivew_page_under_info {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+}
+.reivew_page_under_info > div {
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:24px;
+}
+.reivew_page_under_info > div:first-child {
+    padding-left:8px;
+}
+.reivew_page_under_info > div:first-child > p:last-child {
+    color:#767676;
+}
+.reivew_page_under_info .review_page_under_star img {
+    width:16px;
+    height:16x;
+}
+.reivew_page_under_info > div:last-child > p:last-child {
+    color:#767676;
+    font-weight: 500;
+}
+/* review onlyText */
+.review_list_onlyText_box {
+    width:100%;
+}
+.review_list_onlyText_box .order_number_box {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.review_list_onlyText_box .order_number_box > p  {
+    padding:6px 16px;
+    max-width:218px;
+    background-color:#ECECEC;
+    border-radius:90px;
+    font-size:14px;
+}

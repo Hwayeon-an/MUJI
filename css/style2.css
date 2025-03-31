@@ -8,17 +8,75 @@
 #main_banner .inner_banner { /* main banner / 가운데 정렬 */
   width:100%; height:600px;
   border-radius: 20px;
-  background:url('../images/main_banner.png') center/cover;
+  overflow:hidden;
+  /* background:url('../images/main_banner.png') center/cover; */
 
   display:flex;
   align-items:center;
+
+  position:relative;
 }
-#main_banner .inner_banner article { /* 1200  */
+.slideImg_wrap { /* slide Img div */
+  width:100%; height:100%;
+  position:absolute;
+  top:0; left:0;
+  z-index:-1;
+  display:flex;
+  justify-content: flex-start;
+  /* transition:.5s; */
+}
+.slideImg_wrap img { /* slide Img */
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  /* + */
+  position:absolute;
+  top:0; left:0;
+  opacity: 0;
+  visibility: hidden;
+  transition:.5s;
+} 
+.slideImg_wrap img.show { /* slide Img */
+  opacity:1;
+  visibility:visible;
+} 
+
+
+#main_banner .inner_banner > article { /* 1200  */
   width:1200px;
   padding:0 5px;
   margin:auto;
+  position:relative;
+  /* position:absolute; */
+}
+.slideTxt_wrap {
+  position: relative;
+  top:30px;
+}
+.slideTxt_wrap > article { 
+  position: absolute;
+  top:0; left:0;
+  opacity: 0;
+  visibility: hidden;
+  transition:.5s;
+}
+.slideTxt_wrap article.show {
+  opacity: 1;
+  visibility:visible;
 }
 
+
+
+#main_banner .inner_banner .slideTxt_wrap > article > p {
+  font-size:18px;
+  line-height:1.2;
+  color:#1A3341;
+}
+#main_banner .inner_banner .slideTxt_wrap > article > h1 {
+  font-size:64px;
+  font-weight: 900;
+}
+  /*
 #main_banner .inner_banner > article > p {
   font-size:18px;
   line-height:1.2;
@@ -28,11 +86,12 @@
   font-size:64px;
   font-weight: 900;
 }
+  */
 #main_banner .indicator { /*indicator*/
   display:flex;
   align-items:center;
   gap:18px;
-  margin-top:114px;
+  margin-top:350px;
 }
 #main_banner .indicator button { 
   width:42px;
@@ -54,7 +113,7 @@
   font-weight:500;
   letter-spacing:2px;
 }
-#main_banner .indicator span {
+#main_banner .indicator span:not(.indicator_now) {
   color:#767676;
 }
 
@@ -143,6 +202,7 @@
   height:226px;
   border-radius: 20px;
   position: relative;
+  cursor: pointer;
 }
 #special .short_banner div img { /*기획전 short left*/
   width:100%;
@@ -195,10 +255,16 @@
   margin-right:32px;
   letter-spacing:2px;
 }
-#main_new .new_header .new_indicator > p > span {
+#main_new .new_header .new_indicator > p > span:not(.new_indicator_now) {
   color:#767676;
 }
-#main_new .new_header .new_indicator > button {
+#main_new .new_header .new_indicator > div {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+}
+#main_new .new_header .new_indicator > div > button {
   width:48px;
   height:48px;
   border-radius:12px;
@@ -206,20 +272,19 @@
   justify-content:center;
   align-items:center;
 }
-#main_new .new_header .new_indicator > button > img {
+#main_new .new_header .new_indicator > div > button > img {
   width:28px;
   height:28px;
 }
-#main_new .new_indicator > button:nth-of-type(1) {
+.active_button {
   border:solid 1px #ccc;
   background-color:white;
 }
-#main_new .new_indicator > button:nth-of-type(2) {
+.disable_button {
   border:solid 1px #ccc;
   background-color:rgba(0, 0, 0, 0.1);
-  margin-left:12px;
 }
-#main_new .new_indicator > button:nth-of-type(2) img {
+.disable_button img {
   opacity: 0.6;
 }
 /* 메인 신상품 리스트 */
@@ -227,11 +292,13 @@
   margin-top:32px;
   width:100%;
   height:398px;
+  /* position:relative; */
 }
 .mNew_abs_box {
-  width:3000px;
+  width:auto;
   height:398px;
-  position:absolute;
+  /* position:absolute; */
+  transition:.3s;
 
   display:flex;
   gap:24px;
@@ -248,6 +315,7 @@
 .shopping_img_wrap {
   width:100%;
   height:296px;
+  position:relative;
 }
 .shopping_img_wrap img {
   width:100%;
@@ -280,6 +348,7 @@
 .shopping_txt_wrap .shopping_price { /*가격*/
   font-size:22px;
   font-weight:600;
+  color:#7F0019;
 }
 .shopping_txt_wrap .shopping_price > span { /*가격 (원)*/
   font-size:14px;
@@ -372,6 +441,9 @@
   align-items:center;
   gap:6px;
   font-size:24px;
+}
+#main_popularity .main_popular_ca > article p a {
+  color:white;
 }
 .main_popular_ca p img {
   width:20px;

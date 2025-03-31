@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUJI</title>
+  <style>/* Main Banner */
+    #main_banner {
+      padding:0 24px;
+    }
+    #main_banner .inner_banner { /* main banner / 가운데 정렬 */
+      width:100%; height:600px;
+      border-radius: 20px;
+      overflow:hidden;
+      /* background:url('../images/main_banner.png') center/cover; */
+    
+      display:flex;
+      align-items:center;
+    
+      position:relative;
+    }
+    .slideImg_wrap { /* slide Img div */
+      width:100%; height:100%;
+      position:absolute;
+      top:0; left:0;
+      z-index:-1;
+      display:flex;
+      justify-content: flex-start;
+      /* transition:.5s; */
+    }
+    .slideImg_wrap img { /* slide Img */
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      /* + */
+      position:absolute;
+      top:0; left:0;
+      opacity: 0;
+      visibility: hidden;
+      transition:.5s;
+    } 
+    .slideImg_wrap img.show { /* slide Img */
+      opacity:1;
+      visibility:visible;
+    } 
+    
+    
+    #main_banner .inner_banner > article { /* 1200  */
+      width:1200px;
+      padding:0 5px;
+      margin:auto;
+      position:relative;
+      /* position:absolute; */
+    }
+    .slideTxt_wrap {
+      position: relative;
+      top:30px;
+    }
+    .slideTxt_wrap > article { 
+      position: absolute;
+      top:0; left:0;
+      opacity: 0;
+      visibility: hidden;
+      transition:.5s;
+    }
+    .slideTxt_wrap article.show {
+      opacity: 1;
+      visibility:visible;
+    }
+    
+    
+    
+    #main_banner .inner_banner .slideTxt_wrap > article > p,
+    #main_banner .inner_banner .slideTxt_wrap > article.show > p {
+      font-size:18px;
+      line-height:1.2;
+      color:#1A3341;
+    }
+    #main_banner .inner_banner .slideTxt_wrap > article > h1,
+    #main_banner .inner_banner .slideTxt_wrap > article.show > h1 {
+      font-size:20px;
+      font-weight: 900;
+    }
+      /*
+    #main_banner .inner_banner > article > p {
+      font-size:18px;
+      line-height:1.2;
+      color:#1A3341;
+    }
+    #main_banner .inner_banner > article > h1 {
+      font-size:64px;
+      font-weight: 900;
+    }
+      */
+    #main_banner .indicator { /*indicator*/
+      display:flex;
+      align-items:center;
+      gap:18px;
+      margin-top:350px;
+    }
+    #main_banner .indicator button { 
+      width:42px;
+      height:42px;
+      border-radius:8px;
+      background-color: transparent;
+      border:solid 1px #111;
+    
+      display:flex;
+      justify-content: center;
+      align-items:center;
+    }
+    #main_banner .indicator button img {
+      width:24px;
+      height:24px;
+    }
+    #main_banner .indicator p {
+      font-size:20px;
+      font-weight:500;
+      letter-spacing:2px;
+    }
+    #main_banner .indicator span:not(.indicator_now) {
+      color:#767676;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Banner -->
+  <section id="main_banner">
+    <div class="inner_banner">
+      <!-- slide -->
+      <div class="slideImg_wrap">
+        <img src="images/main_banner1.png" alt="slide" title="slide">
+        <img src="images/main_banner2.png" alt="slide" title="slide">
+        <img src="images/main_banner3.png" alt="slide" title="slide">
+      </div>
+      <article>
+        <article class="slideTxt_wrap">
+          <!--slide txt-->
+          <article>
+            <p>집에서도 관리가 쉽고, 매일 편안하게 입을 수 있는</p>
+            <h1>
+              SOFT PANTS <br>
+              COLLECTION
+            </h1>
+          </article>
+          <article>
+            <p>깔끔하고 가벼운 워싱 데님과 유행에 따라가지 않는 루즈핏의 조화</p>
+            <h1>
+              Washed PANTS <br>
+              Loose Fit
+            </h1>
+          </article>
+          <article>
+            <p>2025 청청패션을 담다. 세부적인 디테일이 담겨진 데님 세트</p>
+            <h1>
+              Double Denim <br>
+              2025 Series
+            </h1>
+          </article>
+        </article>
+        <div class="indicator">
+          <button class="slide_prevbtn"><img src="images/icon_prevBtn(slim).png" alt="Indicator_prev"></button>
+          <p> <span class="indicator_now">1</span> <span>/ 3</span> </p>
+          <button class="slide_nextbtn"><img src="images/icon_nextBtn(slim).png" alt="Indicator_prev"></button>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+
+<script>
+  
+  //포기
+
+  let slides = document.querySelectorAll(".slideImg_wrap img");
+  let text = document.querySelectorAll(".slideTxt_wrap article");
+  let pos = document.querySelector(".indicator_now"); //pos 숫자
+  let prevBtn = document.querySelector(".slide_prevbtn");
+  let nextBtn = document.querySelector(".slide_nextbtn");
+
+  let index = 0; //초기값
+  let delay = 3000;
+  
+  //console.log(pos);
+
+
+  
+  //index 계산 + 시작 
+  function startSlide(){
+    //index = index < 2 ? index++ : 0;
+    if(index < 2){
+      index++;
+    }else{
+      index = 0;
+    }
+    showSlide(index);
+  }
+
+
+
+  //동작 함수
+  function showSlide(index){
+    //img
+    slides.forEach((slide, i) => {
+      // 왜 if문은 안되는거야?! 의 대답.
+      // toggle = 있으면 지우고, 없으면 생성 
+      // 근데! toggle은 ture/false가 있어야 함
+      // slide.classList.toggle("show", i===index)  =>  toggle자체에 조건문을 걸어서 true/false
+      // 해당 if문은 true만 있음
+      // false가 없어서 toggle이 삭제가 안됨  =>  여기서 문제 발생!
+      // 결론
+      // toggle에 조건문 같이 걸거나, if문 쓰지만, if(){}else if(){} 같이 쓰거나.
+      // (근데 else if쓰면 길어지고, 반복 굳이~ 느낌)
+      //
+      // if(index === i){
+      //   slide.classList.toggle("show");
+      //   pos.innerText = index+1;
+      // }
+      slide.classList.toggle("show", i === index);
+      pos.innerText = index+1;
+      //console.log("here");
+    });
+    //text
+    text.forEach((text, i) => {
+      text.classList.toggle("show", index === i);
+    });
+  }
+ 
+
+
+
+  //멈춤
+  function stopSlide(){
+    clearInterval(start2);
+  }
+
+    //이미지 마우스 올리면 stopSlide()
+    // slide[index].addEventListener("mouseover", function(){
+    //   alert();
+    //   stopSlide();
+    // });
+
+
+  showSlide(index); //처음시작
+  function start2(){
+    let start = setInterval(startSlide, delay); //변수에 넣어도 상관없이 setInterval 됨
+  }
+
+
+ 
+  //prev btn
+  
+  prevBtn.addEventListener("click", function(){
+    stopSlide();
+
+    index = index > 0 ? index-- : slides.length-1;
+    showSlide(index);
+
+    start2();
+    console.log(index--);
+  });
+
+/*
+  prevBtn.addEventListener("click", function(){
+        stopSlideShow(); // 자동 슬라이드 멈추기
+
+        if(currentIndex > 0){
+          currentIndex--;
+        }else{
+          currentIndex = slides.length-1;
+        }
+        showSlide(currentIndex);
+        console.log(currentIndex);
+
+        // 일정 시간 후 자동 슬라이드 다시 시작 (3초 뒤)
+        startSlideShow();
+      });
+*/
+
+  nextBtn.addEventListener("click", function(){
+    alert();
+  })
+
+  
+</script>
+</body>
+</html>

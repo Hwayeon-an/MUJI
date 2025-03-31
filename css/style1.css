@@ -85,7 +85,7 @@ select.option_select {
 #search_wrap {
   width:100%;
   height:520px;
-  background:rgba(0, 0, 0, 0.9);
+  background:rgba(0, 0, 0, 0.95);
   border-radius:0 0 32px 32px;
   color:white;
   text-align:center;
@@ -94,6 +94,7 @@ select.option_select {
 
   position:absolute;
   top:80px; left:0;
+  z-index:9999;
 
   opacity: 0;
   visibility: hidden;
@@ -116,7 +117,7 @@ select.option_select {
 }
 #search_wrap .search1 h1 { /*무엇을 찾으시나요?*/
   font-size:42px;
-  width:100%;
+  width:100%; /*이거 해줘야지 버튼이 오른쪽으로 가!*/
 } 
 #search_wrap .search1 button { /*close btn*/
   background: transparent;
@@ -126,15 +127,15 @@ select.option_select {
   width:32px;
   height:32px;
 }
-#search_wrap .search_closeBtn {
+#search_wrap .search_closeBtn {/*END close btn*/
   cursor:pointer;
 }
 
-#search_wrap .search2 { /*search box*/
+#search_wrap .search2 { /*search box form*/
   width:100%;
   margin-top:32px;
 }
-#search_wrap .search2 input#search {
+#search_wrap .search2 input#search { /*search input*/
   width:700px;
   height:70px;
   border-radius: 90px;
@@ -147,15 +148,15 @@ select.option_select {
   padding:0 0 0 68px;
   /*search icon*/
   background-image:url('../images/icon_search\(white\).png');
-  background-position:24px 20px;
+  background-position:24px 20px; /*좌우 / 상하*/
   background-size: 32px;
   background-repeat: no-repeat;
 }
-#search_wrap .search2 input::placeholder {
+#search_wrap .search2 input::placeholder {/*END search input*/
   color:#999;
 }
 
-#search_wrap .search3 {
+#search_wrap .search3 { /*search 추천해요*/
   margin-top:60px;
   padding:0 245px;
   text-align:left;
@@ -171,8 +172,7 @@ select.option_select {
   width:100%;
   height:2px;
   background: #f4f4f4;
-  border-radius: 90px;
-  
+  border-radius: 90px;  
 }
 #search_wrap .search3 div {
   display:flex;

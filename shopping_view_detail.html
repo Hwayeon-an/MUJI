@@ -83,7 +83,7 @@
       <div class="sho_detail_product">
         <!-- left -->
         <div class="product_img">
-          <img src="images/thum_img1.png" alt="대표 이미지">
+          <img src="images/product_thum/thum_img1.png" alt="대표 이미지">
           <ul>
             <li><img src="images/product_thum/img1.png"></li>
             <li class="product_pic"><img src="images/product_thum/img2.png"></li>
@@ -101,7 +101,10 @@
         <div class="product_info">
           <!-- like, share -->
           <div class="like_and_share">
-            <button><img src="images/icon_like(off).png" alt="like" title="like"></button>
+            <button>
+              <img src="images/icon_like(off).png" alt="like" title="like" class="likeIcon_off">
+              <img src="images/icon_like.png" alt="like" title="like" class="likeIcon_on">
+            </button>
             <button><img src="images/icon_share.png" alt="Share" title="Share"></button>
           </div>
 
@@ -127,7 +130,7 @@
                 <li>
                   <input type="radio" name="product_color" id="product_color_radio1" class="color1">
                   <label for="product_color_radio1" class="p_color1 product_color"></label>
-                  <p>아이보리</p>
+                  <p>그레이</p>
 
                   <!--
                     일일히 for id 맞추지 말고
@@ -144,14 +147,20 @@
                 </li>
                 <li>
                   <input type="radio" name="product_color" id="product_color_radio3" class="color3">
-                  <label for="product_color_radio3" class="p_color3 product_color"></label>
-                  <p>올리브</p>
+                  <label for="product_color_radio3" class="p_color2 product_color"></label>
+                  <p>아이보리</p>
+                </li>
+                <li>
+                  <input type="radio" name="product_color" id="product_color_radio4" class="color4">
+                  <label for="product_color_radio4" class="p_color3 product_color"></label>
+                  <p>레드</p>
                 </li>
               </ul>
             </article>
             <!--사이즈-->
             <article class="p_option_size">
               <h2>사이즈</h2>
+              <!--
               <select class="option_select">
                 <option selected disabled>옵션을 선택해주세요</option>
                 <option>XS</option>
@@ -160,6 +169,17 @@
                 <option>L</option>
                 <option>XL</option>
               </select>
+              -->
+              <div class="shopping_option_wrap">
+                <button class="option_select" type="button"> <p>옵션을 선택해주세요.</p> <img src="images/icon_under_arrow(black).png" alt="Option"> </button>
+                <ul class="shopping_ul">
+                  <li>XS</li>
+                  <li>S</li>
+                  <li>M</li>
+                  <li>L</li>
+                  <li>XL</li>
+                </ul>
+              </div>
             </article>
             <!--수량-->
             <article class="p_option_que">
@@ -175,7 +195,7 @@
           <!--총 결제 가격-->
           <article class="total_price">
             <h2>총 가격</h2>
-            <h1>46,900<span>원</span></h1>
+            <h1><p>46,900</p><span>원</span></h1>
           </article>
 
           <!-- BUTTON 장바구니, 구매하기 -->
@@ -198,7 +218,7 @@
 
       <!--상세페이지-->
       <div class="product_detail">
-        <img src="images/product_detail_design.png" alt="detail" title="detail">
+        <img src="images/product_detail_design2.jpg" alt="detail" title="detail">
       </div>
 
     </div>
@@ -320,6 +340,138 @@
     search_box.style.opacity = 0;
     search_box.style.visibility = "hidden";
   });
+
+
+
+  //수량 옵션
+  const minusBtn = document.querySelector(".p_minus");
+  const plusBtn = document.querySelector(".p_plus");
+  const pQue = document.querySelector(".p_que_value");
+  let queValue = parseInt(pQue.value);
+  let price = document.querySelector(".total_price > h1 > p");
+
+  //빼기
+  minusBtn.addEventListener("click", function(){
+    if( queValue > 1 ){
+      queValue--;
+      pQue.value = queValue;
+    }else{
+      alert('최소 수량은 1입니다.');
+      return;
+    }
+
+        
+      //가격
+      //console.log(price.innerText);
+      //console.log(pQue.value);
+      let a = price.innerText.replace(/,/g, "");
+      let b = pQue.value;
+      
+      price.innerText = (a-46900).toLocaleString(); //근데 46900은 유동적이잖앙
+  });
+
+  //더하기
+  plusBtn.addEventListener("click", function(){
+      queValue += 1;
+      //console.log(typeof pQue.value);
+      //console.log(typeof queValue);
+      pQue.value = queValue.toString();
+          
+      //가격
+      //console.log(price.innerText);
+      //console.log(pQue.value);
+      let a = parseFloat(price.innerText.replace(/,/g, "")); //모든 쉼표 제거 /,/ = 쉼표를 찾는다.   g=global(전역).   그냥 ",", ""은 첫번째만 찾아서 없애줭!
+      let b = parseInt(pQue.value);
+      
+      price.innerText = (a+46900).toLocaleString(); // 한국 돈 기준으로 3번째마다 , 넣는다
+  });
+
+  // input에서 수량을 바꿀경우
+  pQue.addEventListener("blur", function(){ //blur 떠난다.
+    //console.log(pQue.value); //ok
+    queValue = Number(pQue.value);
+    price.innerText = (46900*pQue.value).toLocaleString();
+    //console.log(queValue); //ok
+  });
+
+  
+  
+
+
+
+  //like
+  let likeOn = document.querySelector(".likeIcon_on");
+  let likeOff = document.querySelector(".likeIcon_off");
+  let likeBtn = document.querySelector(".like_and_share button:first-child");
+
+  likeBtn.addEventListener('click', function(){
+    let isHidden = getComputedStyle(likeOn).display === "none";
+
+    if(isHidden){
+      likeOn.style.display = "inline-block";
+      likeOff.style.display = "none";
+    }else{
+      likeOn.style.display = "none";
+      likeOff.style.display = "inline-block";
+    }
+  });
+
+
+
+  // option
+  let optionBtn = document.querySelector(".option_select");
+
+  let optionUl = document.querySelector(".shopping_ul");
+  let optionLis = document.querySelectorAll(".shopping_ul > li");
+
+  optionBtn.addEventListener("click", ()=>{
+    // (1) 클릭! 근데 값이 있는가 없는가?
+    if(getComputedStyle(optionUl).maxHeight === "0px"){ //닫혀있을 때 클릭 : true
+      optionUl.style.maxHeight = optionUl.scrollHeight+"px";
+      optionUl.style.opacity = "1"; // border 때문에
+      optionUl.style.visibility = "visible"; // 수량 때문에
+    }else{
+      optionUl.style.maxHeight = null;
+      optionUl.style.opacity = "0"; // border 때문에
+      optionUl.style.visibility = "hidden"; // 수량 때문에
+    }
+  });
+
+  // (2) li option 클릭 시
+  optionLis.forEach((optionLi)=>{
+    optionLi.addEventListener("click", ()=>{
+      optionUl.style.maxHeight = optionUl.scrollHeight+"px";
+      optionUl.style.opacity = "0";
+      optionUl.style.visibility = "hidden"; // 수량 때문에
+
+      optionBtn.querySelector("p").innerText = optionLi.innerText;
+      optionBtn.querySelector("p").style.color = "#1b1b1f";
+    });
+  });
+
+
+
+
+  // Thum
+  let Thum = document.querySelector(".product_img > img"); //대표이미지
+  let allImg = document.querySelectorAll(".product_img > ul > li");
+
+  allImg.forEach((imgList)=>{
+    imgList.addEventListener("click", (e)=>{
+      // (1) 선택한 이미지에 빨간테두리 적용전 remove
+      allImg.forEach((removeImg)=>{ removeImg.classList.remove("product_pic"); });
+      imgList.classList.add("product_pic");
+
+      // (2) 이미지 바꾸면 됨!
+      // 선택 이미지의 src를 임시 변수에 저장
+      // 선택했던 li img src에 대표 이미지였던 src 적용
+      // 대표 이미지src는 임시 변수에 있던 것을 저장하기 :: 건너건너
+      let choiceImg = e.target.src;
+      e.target.src = Thum.src;
+      Thum.src = choiceImg;
+    });
+  });
+  
 </script>
 </body>
 </html>

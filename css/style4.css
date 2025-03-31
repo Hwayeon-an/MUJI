@@ -103,6 +103,129 @@
 }
 
 
+/* Magazine */
+.magazine_header_txt {
+  width:100%;
+  padding-left:8px;
+  margin-top:140px;
+  display:flex;
+  justify-content: space-between;
+  align-items:flex-end;
+}
+.magazine_header_txt > div {
+  width:100%;
+}
+.magazine_header_txt > div > h1 {
+  font-size:42px;
+  font-weight:700;
+  color:#1D1D1F;
+}
+.magazine_header_txt > div > p.magazine_p {
+  width:90%;
+  font-size:24px;
+  font-weight:500;
+  color:#1D1D1F;
+  margin-top:32px;
+  line-height:1.8;
+}
+.magazine_span {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding:12px 32px;
+  background-color:#f1f1f1;
+  border-radius:12px;
+  font-size:14px;
+  margin-top:24px;
+}
+.magazine_buyBtn {
+  display:block;
+  width:150px;
+  line-height:60px;
+  text-align:center;
+  color:#1d1d1f;
+  border:solid 1px #1d1d1f;
+  border-radius: 90px;
+  transition:.3s;
+}
+.magazine_buyBtn:hover {
+  background-color:#7F0019;
+  color:#f4f4f4;
+  border:solid 1px #7F0019;
+}
+.magazine_list_wrap {
+  width:100%;
+  display:flex;
+  gap:62px 24px;
+  flex-wrap:wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  margin-top:102px;
+}
+.magazine_list_wrap > article {
+  width:380px;
+  height:398px;
+  background-color:white;
+  border:solid 1px #EDECEF;
+  border-radius:20px;
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+.magazine_list_wrap > article > img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  transition:.6s;
+}
+.magazine_list_wrap > article:hover > img {
+  transform:scale(1.2);
+}
+.img_view_container { /* 매거진 모달 */
+  width:100%;
+  height:100%;
+  position:fixed;
+  background-color:rgba(0,0,0,0.85);
+  z-index:999;
+  opacity: 0;
+  visibility: hidden;
+}
+.magazine_close {
+  width:52px;
+  height:52px;
+  position: absolute;
+  top:50px;
+  right:200px;
+  background-color: transparent;
+  border:none; outline:none;
+}
+.magazine_close img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transition:.6s;
+}
+.magazine_close:hover img {
+  transform:rotate(180deg);
+  opacity: 1;
+}
+.magazine_img_box {
+  width:50%;
+  height:60vh;
+  overflow:hidden;
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%, -50%);
+  border-radius: 20px;
+}
+.magazine_img_box > img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+
 /* Note header txt */
 .info_header_txt {
   width:100%;
